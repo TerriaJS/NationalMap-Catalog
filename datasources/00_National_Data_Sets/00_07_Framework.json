@@ -152,9 +152,7 @@
             {
               "name": "Defence Practice Areas",
               "type": "esri-mapServer",
-              "url": "http://www.ga.gov.au/gis/rest/services/topography/Defence_Restricted_Areas/MapServer",
-              "layers": "Defence_Practice_Areas",
-              "legendUrl": "http://www.ga.gov.au/gis/server/capabilities/Defence_Prohibited_Areas_PracticeArea_Legend.png",
+              "url": "http://services.ga.gov.au/gis/rest/services/Defence_Restricted_Areas/MapServer/0",
               "info": [
                 {
                   "name": "Licence",
@@ -165,9 +163,7 @@
             {
               "name": "Defence Training Areas",
               "type": "esri-mapServer",
-              "url": "http://www.ga.gov.au/gis/rest/services/topography/Defence_Restricted_Areas/MapServer",
-              "layers": "Defence_Training_Areas",
-              "legendUrl": "http://www.ga.gov.au/gis/server/capabilities/Defence_Prohibited_Areas_TrainingArea_Legend.png",
+              "url": "http://services.ga.gov.au/gis/rest/services/Defence_Restricted_Areas/MapServer/1",
               "info": [
                 {
                   "name": "Licence",
@@ -178,9 +174,7 @@
             {
               "name": "Defence Prohibited Areas",
               "type": "esri-mapServer",
-              "url": "http://www.ga.gov.au/gis/rest/services/topography/Defence_Restricted_Areas/MapServer",
-              "layers": "Defence_Prohibited_Areas",
-              "legendUrl": "http://www.ga.gov.au/gis/server/capabilities/Defence_Prohibited_Areas_ProhibitedArea_Legend.png",
+              "url": "http://services.ga.gov.au/gis/rest/services/Defence_Restricted_Areas/MapServer/2",
               "info": [
                 {
                   "name": "Licence",
@@ -191,9 +185,7 @@
             {
               "name": "Electricity Transmission Lines",
               "type": "esri-mapServer",
-              "url": "http://www.ga.gov.au/gis/rest/services/topography/National_Electricity_Transmission_Lines/MapServer",
-              "layers": "National_Electricity_Transmission_Lines",
-              "legendUrl": "http://www.ga.gov.au/gis/server/capabilities/National_Electricity_Transmission_Lines.png",
+              "url": "http://services.ga.gov.au/gis/rest/services/Electricity_Infrastructure/MapServer/2",
               "info": [
                 {
                   "name": "Licence",
@@ -204,9 +196,7 @@
             {
               "name": "Electricity Transmission Substations",
               "type": "esri-mapServer",
-              "url": "http://www.ga.gov.au/gis/rest/services/topography/National_Electricity_Transmission_Substations/MapServer",
-              "layers": "National_Electricity_Transmission_Substations",
-              "legendUrl": "http://www.ga.gov.au/gis/server/capabilities/National_Electricity_Transmission_Substations.png",
+              "url": "http://services.ga.gov.au/gis/rest/services/Electricity_Infrastructure/MapServer/1",
               "info": [
                 {
                   "name": "Licence",
@@ -217,9 +207,7 @@
             {
               "name": "Onshore Gas Pipelines",
               "type": "esri-mapServer",
-              "url": "http://www.ga.gov.au/gis/rest/services/topography/National_Onshore_Gas_Pipelines/MapServer",
-              "layers": "Gas_Pipelines",
-              "legendUrl": "http://www.ga.gov.au/gis/server/capabilities/National_Onshore_Gas_Pipelines_Legend.png",
+              "url": "http://services.ga.gov.au/gis/rest/services/Oil_Gas_Infrastructure/MapServer/1",
               "info": [
                 {
                   "name": "Licence",
@@ -230,9 +218,7 @@
             {
               "name": "Onshore Oil Pipelines",
               "type": "esri-mapServer",
-              "url": "http://www.ga.gov.au/gis/rest/services/topography/National_Onshore_Oil_Pipelines/MapServer",
-              "layers": "Oil_Pipelines",
-              "legendUrl": "http://www.ga.gov.au/gis/server/capabilities/National_Onshore_Oil_Pipelines_Legend.png",
+              "url": "http://services.ga.gov.au/gis/rest/services/Oil_Gas_Infrastructure/MapServer/0",
               "info": [
                 {
                   "name": "Licence",
