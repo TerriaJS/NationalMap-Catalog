@@ -1,6 +1,9 @@
 
 Change Log
 ==========
+### 2016-06-15
+* Search data.vic.gov.au for KMZs (and GeoJSON and Csv-geo-au, which there aren't any of yet).
+* Organise data.vic.gov.au items by organisation instead of by group (because there were many ungrouped items).
 
 ### 2016-06-15
 
