@@ -4,6 +4,8 @@ Change Log
 
 ### 2016-07-15
 * Add 62 layers from the ACT Government.
+* Group ungrouped items from data.vic.gov.au
+* Show KMZs as well as KML from data.vic.gov.au
 
 ### 2016-06-15
 
