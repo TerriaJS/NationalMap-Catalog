@@ -27,6 +27,7 @@
                   "url": "https://www.data.brisbane.qld.gov.au/data",
                   "filterQuery": [ { q: 'groups:spatial-data' } ],
                   "csvResourceFormat": "csv",
+                  "useResourceName": true,
                   "includeCsv": true,
                   "includeKml": true,
                   "includeGeoJson": true
@@ -40,7 +41,8 @@
                 <%- include('includes/dga_org', { name: 'Gold Coast', org: 'city-of-gold-coast' }) %>,
                 <%- include('includes/dga_org', { name: 'Noosa', org: 'noosa-shire-council' }) %>,
                 <%- include('includes/dga_org', { name: 'Cairns', org: 'cairns-regional-council' }) %>,
-                <%- include('includes/dga_org', { name: 'Moreton Bay', org: 'moreton-bay-regional-council' }) %>,                
+                <%- include('includes/dga_org', { name: 'Moreton Bay', org: 'moreton-bay-regional-council' }) %>,
+                <%- include('includes/dga_org', { name: 'City of Ipswich', org: 'city-of-ipswich' }) %>,  
                 <%- include('includes/localdata_org', { name: 'Rockhampton', org: 'rockhampton-regional-council' }) %>,                
             ]
         },

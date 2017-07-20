@@ -10278,185 +10278,78 @@
     {
       "items": [
         {
-          "blacklist": {
-            "Coal Resource Boundary": true,
-            "Coal Resource Area": true,
-            "Coal Mine Site": true
-          },
-          "url": "https://geospatial.information.qld.gov.au/ArcGIS/rest/services/MINES/Resources/MapServer",
-          "type": "esri-mapServer-group",
-          "name": "Resources"
-        },
-        {
-          "url": "https://geospatial.information.qld.gov.au/ArcGIS/rest/services/MINES/AdministrativeAreas/MapServer",
-          "type": "esri-mapServer-group",
-          "name": "Administrative Areas"
-        },
-        {
-          "url": "https://geospatial.information.qld.gov.au/ArcGIS/rest/services/MINES/Boreholes/MapServer",
-          "type": "esri-mapServer-group",
-          "name": "Boreholes"
-        },
-        {
-          "blacklist": {
-            "Regional Mount Isa Inlier Structure": true,
-            "Regional Moreton Region Surface Geology": true,
-            "Regional Hodgkinson-Laura Basins Surface Geology": true,
-            "Regional Mount Isa Inlier extent ": true,
-            "Regional Moreton Region extent ": true,
-            "Regional Hodgkinson-Laura Basins extent ": true,
-            "Regional Carpentaria-Karumba Basins Surface Geology": true,
-            "Regional Carpentaria-Karumba Basins Structure": true,
-            "Regional Cape York Peninsula Surface Geology": true,
-            "Regional Cape York Peninsula Structure": true,
-            "Regional Burdekin River Surface Geology": true,
-            "Regional Burdekin River Structure": true,
-            "Regional Bowen Basin Structure": true,
-            "Regional Bowen Basin Solid Geology": true,
-            "Regional Central Eromanga Basin Structure": true,
-            "Regional Central Eromanga Basin Surface Geology": true,
-            "Regional Bowen Basin extent": true,
-            "Regional Burdekin River extent": true,
-            "Regional Cape York Peninsula extent": true,
-            "Regional Carpentaria-Karumba Basins extent": true,
-            "Regional Central Eromanga Basin extent": true,
-            "Regional Georgina Basin extent ": true
-          },
-          "url": "https://geospatial.information.qld.gov.au/ArcGIS/rest/services/MINES/GeologyRegional/MapServer",
-          "type": "esri-mapServer-group",
-          "name": "Regional Geology"
-        },
-        {
-          "url": "https://geospatial.information.qld.gov.au/ArcGIS/rest/services/MINES/GeologyState/MapServer",
-          "type": "esri-mapServer-group",
-          "name": "State Geology"
-        },
-        {
-          "url": "https://geospatial.information.qld.gov.au/ArcGIS/rest/services/MINES/Geophysics/MapServer",
-          "type": "esri-mapServer-group",
-          "name": "Geophysics"
-        },
-        {
-          "blacklist": {
-            "Historic Advertised Area Petroleum": true,
-            "Historic ML Granted": true
-          },
-          "url": "https://geospatial.information.qld.gov.au/ArcGIS/rest/services/MINES/MinesPermitsHistoric/MapServer",
-          "type": "esri-mapServer-group",
-          "name": "Historic Mines Permits"
-        },
-        {
-          "url": "https://geospatial.information.qld.gov.au/ArcGIS/rest/services/MINES/StructuralFramework/MapServer",
-          "type": "esri-mapServer-group",
-          "name": "Structural Framework"
-        },
-        {
-          "url": "https://geospatial.information.qld.gov.au/ArcGIS/rest/services/MINES/StructuralFramework/MapServer",
-          "type": "esri-mapServer-group",
-          "name": "Floodlines"
-        },
-        {
-          "url": "https://geospatial.information.qld.gov.au/ArcGIS/rest/services/QLD/CurrentLandUse/MapServer",
-          "type": "esri-mapServer-group",
-          "name": "Current Land Use"
-        },
-        {
-          "url": "https://geospatial.information.qld.gov.au/ArcGIS/rest/services/QLD/QTopo_WebM/MapServer",
-          "type": "esri-mapServer-group",
-          "name": "QTopo"
-        },
-        {
-          "blacklist": {
-            "Sorghum - long term median yield - tonnes per hectare - El Nino": true,
-            "Sorghum - long term median yield - tonnes per hectare - all years": true,
-            "Number of occurrences of 28C or higher for 3 days in a row in Feb": true,
-            "Number of occurrences of 28C or higher for 3 days in a row in Apr": true,
-            "Sorghum - deviation percent from long term median yield - La Nina": true,
-            "Sorghum - deviation percent from long term median yield - El Nino": true
-          },
-          "url": "https://geospatial.information.qld.gov.au/ArcGIS/rest/services/QLD/WeatherAndExtremeEventRisk/MapServer",
-          "type": "esri-mapServer-group",
-          "name": "Weather and Extreme Event Risk"
-        }
-      ],
-      "type": "group",
-      "name": "Queensland Government"
-    },
-    {
-      "items": [
-        {
           "url": "https://gisservices.information.qld.gov.au/arcgis/rest/services/Biota",
-          "type": "esri-mapServer-group",
+          "type": "esri-group",
           "name": "Biota"
         },
         {
           "url": "https://gisservices.information.qld.gov.au/arcgis/rest/services/Boundaries",
-          "type": "esri-mapServer-group",
+          "type": "esri-group",
           "name": "Boundaries"
         },
         {
           "url": "https://gisservices.information.qld.gov.au/arcgis/rest/services/Economy",
-          "type": "esri-mapServer-group",
+          "type": "esri-group",
           "name": "Economy"
         },
         {
           "url": "https://gisservices.information.qld.gov.au/arcgis/rest/services/Elevation",
-          "type": "esri-mapServer-group",
+          "type": "esri-group",
           "name": "Elevation"
         },
         {
           "url": "https://gisservices.information.qld.gov.au/arcgis/rest/services/Environment",
-          "type": "esri-mapServer-group",
+          "type": "esri-group",
           "name": "Environment"
         },
         {
           "url": "https://gisservices.information.qld.gov.au/arcgis/rest/services/Farming",
-          "type": "esri-mapServer-group",
+          "type": "esri-group",
           "name": "Farming"
         },
         {
           "url": "https://gisservices.information.qld.gov.au/arcgis/rest/services/GeoscientificInformation",
-          "type": "esri-mapServer-group",
+          "type": "esri-group",
           "name": "Geoscientific Information"
         },
         {
           "url": "https://gisservices.information.qld.gov.au/arcgis/rest/services/Imagery",
-          "type": "esri-mapServer-group",
+          "type": "esri-group",
           "name": "Imagery"
         },
         {
           "url": "https://gisservices.information.qld.gov.au/arcgis/rest/services/InlandWaters",
-          "type": "esri-mapServer-group",
+          "type": "esri-group",
           "name": "Inland Waters"
         },
         {
           "url": "https://gisservices.information.qld.gov.au/arcgis/rest/services/Location",
-          "type": "esri-mapServer-group",
+          "type": "esri-group",
           "name": "Location"
         },
         {
           "url": "https://gisservices.information.qld.gov.au/arcgis/rest/services/Oceans",
-          "type": "esri-mapServer-group",
+          "type": "esri-group",
           "name": "Oceans"
         },
         {
           "url": "https://gisservices.information.qld.gov.au/arcgis/rest/services/PlanningCadastre",
-          "type": "esri-mapServer-group",
+          "type": "esri-group",
           "name": "Planning & Cadastre"
         },
         {
           "url": "https://gisservices.information.qld.gov.au/arcgis/rest/services/Society",
-          "type": "esri-mapServer-group",
+          "type": "esri-group",
           "name": "Society"
         },
         {
           "url": "https://gisservices.information.qld.gov.au/arcgis/rest/services/Transportation",
-          "type": "esri-mapServer-group",
+          "type": "esri-group",
           "name": "Transportation"
         }
       ],
       "type": "group",
-      "name": "Queensland Government (BETA)"
+      "name": "Queensland Government"
     },
     {
       "type": "ckan",
@@ -11207,6 +11100,7 @@
                 }
               ],
               "csvResourceFormat": "csv",
+              "useResourceName": true,
               "includeCsv": true,
               "includeKml": true,
               "includeGeoJson": true
@@ -11306,6 +11200,26 @@
               ],
               "url": "http://www.data.gov.au",
               "name": "Moreton Bay",
+              "type": "ckan",
+              "includeCsv": true,
+              "includeGeoJson": true,
+              "includeKml": true,
+              "includeWms": true,
+              "includeWfs": true,
+              "includeEsriMapServer": true,
+              "includeEsriFeatureServer": true,
+              "ungroupedTitle": ""
+            },
+            {
+              "minimumMaxScaleDenominator": 10000000000,
+              "filterByWmsGetCapabilities": false,
+              "filterQuery": [
+                {
+                  "fq": "(organization:city-of-ipswich AND res_format:(geojson OR GeoJSON OR kml OR KML OR kmz OR KMZ OR wms OR WMS OR CSV-GEO-AU OR csv-geo-au OR aus-geo-csv OR \"Esri REST\"))"
+                }
+              ],
+              "url": "http://www.data.gov.au",
+              "name": "City of Ipswich",
               "type": "ckan",
               "includeCsv": true,
               "includeGeoJson": true,
