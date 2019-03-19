@@ -2,6 +2,10 @@
 Change Log
 ==========
 
+### 2019-02-18-updated-2019-03-20
+
+* Added Fractional Cover Percentiles Seasonal layers.
+
 ### 2018-12-17-updated-2019-02-19
 
 * Removing the defunct layer "Dynamic Hydrology and Marine Layer" from "National Datasets -> Surface Water and Marine" group.
