@@ -123,6 +123,129 @@
               "items": [
                 <% include MangroveCanopyCover %>
               ]
+            },
+            {
+              "name": "Vegetation Cover (MODIS, 500m)",
+              "type": "group",
+              "preserveOrder": "true",
+              "items": [
+                {
+                  "name": "Monthly",
+                  "type": "group",
+                  "preserveOrder": "true",
+                  "items": [
+                    {
+                      "name": "Vegetation Fractional Cover (PV, NPV & BS, Monthly)",
+                      "type": "wms",
+                      "url": "http://gsky.nci.org.au/ows/geoglam",
+                      "linkedWcsUrl": "http://gsky.nci.org.au/ows/geoglam",
+                      "linkedWcsCoverage": "modis_fract_cov_monthly",
+                      "cacheDuration": "2h",
+                      "layers": "modis_fract_cov_monthly",
+                      "opacity": 1,
+                      "initialTimeSource": "end",
+                      "useOwnClock": true,
+                      "dateFormat": {
+                        "currentTime": "d mmmm yyyy",
+                        "timelineTic": "yyyy"
+                      },
+                      "ignoreUnknownTileErrors": true
+                    },
+                    {
+                      "name": "Total Vegetation Cover (PV+NPV, Monthly)",
+                      "type": "wms",
+                      "url": "http://gsky.nci.org.au/ows/geoglam",
+                      "linkedWcsUrl": "http://gsky.nci.org.au/ows/geoglam",
+                      "linkedWcsCoverage": "modis_tot_cov_monthly",
+                      "cacheDuration": "2h",
+                      "layers": "modis_tot_cov_monthly",
+                      "opacity": 1,
+                      "initialTimeSource": "end",
+                      "useOwnClock": true,
+                      "dateFormat": {
+                        "currentTime": "d mmmm yyyy",
+                        "timelineTic": "yyyy"
+                      },
+                      "ignoreUnknownTileErrors": true
+                    },
+                    {
+                      "name": "Vegetation Cover Anomaly (Monthly)",
+                      "type": "wms",
+                      "url": "http://gsky.nci.org.au/ows/geoglam",
+                      "linkedWcsUrl": "http://gsky.nci.org.au/ows/geoglam",
+                      "linkedWcsCoverage": "modis_tot_cov_anomaly",
+                      "cacheDuration": "2h",
+                      "layers": "modis_tot_cov_anomaly",
+                      "opacity": 1,
+                      "initialTimeSource": "end",
+                      "useOwnClock": true,
+                      "dateFormat": {
+                        "currentTime": "d mmmm yyyy",
+                        "timelineTic": "yyyy"
+                      },
+                      "ignoreUnknownTileErrors": true
+                    },
+                    {
+                      "name": "Vegetation Cover Deciles (Monthly)",
+                      "type": "wms",
+                      "url": "http://gsky.nci.org.au/ows/geoglam",
+                      "linkedWcsUrl": "http://gsky.nci.org.au/ows/geoglam",
+                      "linkedWcsCoverage": "modis_tot_cov_decile",
+                      "cacheDuration": "2h",
+                      "layers": "modis_tot_cov_decile",
+                      "opacity": 1,
+                      "initialTimeSource": "end",
+                      "useOwnClock": true,
+                      "dateFormat": {
+                        "currentTime": "d mmmm yyyy",
+                        "timelineTic": "yyyy"
+                      },
+                      "ignoreUnknownTileErrors": true
+                    }
+                  ]
+                },
+                {
+                  "name": "8-day",
+                  "type": "group",
+                  "preserveOrder": "true",
+                  "items": [
+                    {
+                      "name": "Vegetation Fractional Cover (PV, NPV & BS) (8-day)",
+                      "type": "wms",
+                      "url": "http://gsky.nci.org.au/ows/geoglam",
+                      "linkedWcsUrl": "http://gsky.nci.org.au/ows/geoglam",
+                      "linkedWcsCoverage": "modis_fract_cov_8day",
+                      "cacheDuration": "2h",
+                      "layers": "modis_fract_cov_8day",
+                      "opacity": 1,
+                      "initialTimeSource": "end",
+                      "useOwnClock": true,
+                      "dateFormat": {
+                        "currentTime": "d mmmm yyyy",
+                        "timelineTic": "yyyy"
+                      },
+                      "ignoreUnknownTileErrors": true
+                    },
+                    {
+                      "name": "Total Vegetation Cover (PV+NPV) (8-day)",
+                      "type": "wms",
+                      "url": "http://gsky.nci.org.au/ows/geoglam",
+                      "linkedWcsUrl": "http://gsky.nci.org.au/ows/geoglam",
+                      "linkedWcsCoverage": "modis_tot_cov_8day",
+                      "cacheDuration": "2h",
+                      "layers": "modis_tot_cov_8day",
+                      "opacity": 1,
+                      "initialTimeSource": "end",
+                      "useOwnClock": true,
+                      "dateFormat": {
+                        "currentTime": "d mmmm yyyy",
+                        "timelineTic": "yyyy"
+                      },
+                      "ignoreUnknownTileErrors": true
+                    }
+                  ]
+                }
+              ]
             }
           ],
           "name": "Vegetation",
