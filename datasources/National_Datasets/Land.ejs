@@ -1,21 +1,10 @@
         {
           "items": [
             {
-              "name": "Agriculture and Mining",
+              "name": "Land Use and Cover",
               "type": "group",
               "items": [
-                {
-                    "name": "Catchment Scale Land Use 2017",
-                    "type": "esri-mapServer",
-                    "dataUrl": "http://www.agriculture.gov.au/abares/data/clum-50m-current",
-                    "dataUrlType": "direct",
-                    "url": "http://www.asris.csiro.au/arcgis/rest/services/abares/clum_50m_current/MapServer"
-                },
-                {
-                  "name": "Agricultural Exposure",
-                  "type": "esri-mapServer",
-                  "url": "http://services.ga.gov.au/gis/rest/services/NEXIS_Agricultural_Exposure/MapServer"
-                }
+                <%- include includes/CLUM %>,
               ]
             },
             {
