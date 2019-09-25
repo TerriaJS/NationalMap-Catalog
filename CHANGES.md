@@ -2,9 +2,13 @@
 Change Log
 ==========
 
-### Next
+### 2019-08-14-updated-2019-09-25
 
 * Updated the URL of Tasmanian Government LIST services to use HTTPS and MapServer rather than ImageServer endpoints
+* Removed the `Australian Bureau of Statistics` group
+* Added GSKY satellite layers as `Vegetation Cover (MODIS, 500m)` under Vegetation
+* Added ABS LGA 2016 layer to National Boundaries
+* Update layer name of `Mangrove canopy cover > Canopy cover` to the new mangrove layer
 
 ### 2019-08-14
 
