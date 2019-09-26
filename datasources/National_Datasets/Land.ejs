@@ -2,6 +2,8 @@
           "items": [
             <%- include includes/Geology %>,
             <%- include includes/Topography %>,
+            <%- include includes/Radiation %>,
+            <%- include includes/Terrain %>,
             {
               "name": "Land Use and Cover",
               "type": "group",
@@ -20,12 +22,6 @@
                     ]
                 },
               ]
-            },
-            {
-                "name": "Landscape Attributes",
-                "url": "http://www.asris.csiro.au/arcgis/rest/services/TERN/SRTM_attributes_3s_ACLEP_AU/MapServer",
-                "type": "esri-mapServer-group",
-                "layers": "1"
             },
             {
                 "name": "National Soil Attributes",
