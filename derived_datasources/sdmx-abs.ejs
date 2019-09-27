@@ -4970,7 +4970,7 @@
     "name": "Land Cover, changes between 2005 and 2011",
     "bys": null,
     "id": "ABS_LAND_COVER",
-    "subId": null,
+    "subId": "agr",
     "geoType": null,
     "hasState": null,
     "singleValuedDimensionIds": null,
@@ -5002,7 +5002,7 @@
     "name": "Land Management Practices Survey 2011-2012",
     "bys": null,
     "id": "ABS_LAMPS",
-    "subId": null,
+    "subId": "agr",
     "geoType": null,
     "hasState": null,
     "singleValuedDimensionIds": [
@@ -5037,7 +5037,7 @@
     "name": "Land Management Practices Survey 2013-2014",
     "bys": null,
     "id": "ABS_LAMPS2014",
-    "subId": null,
+    "subId": "agr",
     "geoType": null,
     "hasState": null,
     "singleValuedDimensionIds": [
@@ -5072,7 +5072,7 @@
     "name": "Land Use, changes between 2006 and 2011",
     "bys": null,
     "id": "ABS_LAND_USE",
-    "subId": null,
+    "subId": "agr",
     "geoType": null,
     "hasState": null,
     "singleValuedDimensionIds": [
@@ -5106,7 +5106,7 @@
     "name": "Land Cover, changes between 2005 and 2011",
     "bys": null,
     "id": "ABS_LAND_COVER",
-    "subId": null,
+    "subId": "lclu",
     "geoType": null,
     "hasState": null,
     "singleValuedDimensionIds": null,
@@ -5138,7 +5138,7 @@
     "name": "Land Management Practices Survey 2011-2012",
     "bys": null,
     "id": "ABS_LAMPS",
-    "subId": null,
+    "subId": "lclu",
     "geoType": null,
     "hasState": null,
     "singleValuedDimensionIds": [
@@ -5173,7 +5173,7 @@
     "name": "Land Management Practices Survey 2013-2014",
     "bys": null,
     "id": "ABS_LAMPS2014",
-    "subId": null,
+    "subId": "lclu",
     "geoType": null,
     "hasState": null,
     "singleValuedDimensionIds": [
@@ -5208,7 +5208,7 @@
     "name": "Land Use, changes between 2006 and 2011",
     "bys": null,
     "id": "ABS_LAND_USE",
-    "subId": null,
+    "subId": "lclu",
     "geoType": null,
     "hasState": null,
     "singleValuedDimensionIds": [
@@ -5344,7 +5344,7 @@
     "name": "Monetary account for land use, between 2006 and 2011",
     "bys": null,
     "id": "ABS_MONETARY_ACCOUNT",
-    "subId": null,
+    "subId": "agr",
     "geoType": null,
     "hasState": null,
     "singleValuedDimensionIds": null,
@@ -5405,7 +5405,7 @@
     "name": "Monetary account for land use, between 2006 and 2011",
     "bys": null,
     "id": "ABS_MONETARY_ACCOUNT",
-    "subId": null,
+    "subId": "lclu",
     "geoType": null,
     "hasState": null,
     "singleValuedDimensionIds": null,
@@ -5597,7 +5597,7 @@
     "name": "Physical account for land cover, between 2006 and 2011",
     "bys": null,
     "id": "ABS_PHYSICAL_ACCOUNT_LC",
-    "subId": null,
+    "subId": "agr",
     "geoType": null,
     "hasState": null,
     "singleValuedDimensionIds": null,
@@ -5625,7 +5625,7 @@
     "name": "Physical account for land use, between 2006 to 2011",
     "bys": null,
     "id": "ABS_PHYSICAL_ACCOUNT_LU",
-    "subId": null,
+    "subId": "agr",
     "geoType": null,
     "hasState": null,
     "singleValuedDimensionIds": null,
@@ -5693,7 +5693,7 @@
     "name": "Physical account for land cover, between 2006 and 2011",
     "bys": null,
     "id": "ABS_PHYSICAL_ACCOUNT_LC",
-    "subId": null,
+    "subId": "lclu",
     "geoType": null,
     "hasState": null,
     "singleValuedDimensionIds": null,
@@ -5721,7 +5721,7 @@
     "name": "Physical account for land use, between 2006 to 2011",
     "bys": null,
     "id": "ABS_PHYSICAL_ACCOUNT_LU",
-    "subId": null,
+    "subId": "lclu",
     "geoType": null,
     "hasState": null,
     "singleValuedDimensionIds": null,
@@ -5970,38 +5970,6 @@
         <%- include("../datasources/includes/sdmx-abs-item", {
     "outerGroups": [
       "National Datasets",
-      "Land Cover and Land Use"
-    ],
-    "nameOutsideCatalog": null,
-    "group": "Land Use and Cover",
-    "subgroup": null,
-    "name": "Water Use on Australian Farms",
-    "bys": null,
-    "id": "ABS_REGIONAL_ASGS2016",
-    "subId": "WATER",
-    "geoType": "SAx",
-    "hasState": null,
-    "singleValuedDimensionIds": [
-      "MEASURE"
-    ],
-    "sexId": null,
-    "ageId": null,
-    "regionDimensionId": "ASGS_2016",
-    "regionNameTemplate": "{{name}}_code_2016",
-    "series": null,
-    "regionType": null,
-    "measureWhitelist": [
-      "WATER_[2-9]"
-    ],
-    "measureTotalValueIds": null,
-    "measureSelectedInitially": null,
-    "blacklist": null,
-    "cannotSum": null,
-    "description": "Explanatory notes are available [here](http://www.abs.gov.au/ausstats/abs@.nsf/exnote/1410.0)."
-        }) %>,
-        <%- include("../datasources/includes/sdmx-abs-item", {
-    "outerGroups": [
-      "National Datasets",
       "Social and Economic"
     ],
     "nameOutsideCatalog": null,
@@ -6046,7 +6014,7 @@
     "name": "Land Use - Agricultural Commodities 2011",
     "bys": null,
     "id": "ABS_REGIONAL_ASGS",
-    "subId": "AGRIC",
+    "subId": "AGRIC_agr",
     "geoType": "SAx",
     "hasState": null,
     "singleValuedDimensionIds": [
@@ -6082,7 +6050,7 @@
     "name": "Land Use - Agricultural Commodities 2011",
     "bys": null,
     "id": "ABS_REGIONAL_ASGS",
-    "subId": "AGRIC",
+    "subId": "AGRIC_lclu",
     "geoType": "SAx",
     "hasState": null,
     "singleValuedDimensionIds": [
@@ -6256,7 +6224,7 @@
     "name": "Land Use - Agricultural Commodities 2011 and 2016",
     "bys": null,
     "id": "ABS_REGIONAL_ASGS2016",
-    "subId": "AGRIC",
+    "subId": "AGRIC_agr",
     "geoType": "SAx",
     "hasState": null,
     "singleValuedDimensionIds": [
@@ -6292,7 +6260,7 @@
     "name": "Land Use - Agricultural Commodities 2011 and 2016",
     "bys": null,
     "id": "ABS_REGIONAL_ASGS2016",
-    "subId": "AGRIC",
+    "subId": "AGRIC_lclu",
     "geoType": "SAx",
     "hasState": null,
     "singleValuedDimensionIds": [
