@@ -1,0 +1,208 @@
+{
+  "items": [
+    <%- include Ground_Water %>,
+    {
+      "name": "Water Observations from Space",
+      "type": "group",
+      "preserveOrder": true,
+      "items": [
+          {
+              "id": "11638ff8",
+              "name": "Individual water observations",
+              "layers": "wofs_albers",
+              "url": "https://ows.services.dea.ga.gov.au/",
+              "type": "wms",
+              "useOwnClock": true,
+              "ignoreUnknownTileErrors": true,
+              "opacity": 1,
+              "featureTimesProperty": "data_available_for_dates"
+
+          },
+          {
+              "id": "d60a77da",
+              "name": "All water observations combined",
+              "layers": "wofs_filtered_summary",
+              "url": "https://ows.services.dea.ga.gov.au/",
+              "type": "wms",
+              "useOwnClock": true,
+              "ignoreUnknownTileErrors": true,
+              "opacity": 1,
+              "linkedWcsUrl": "https://ows.services.dea.ga.gov.au/",
+              "linkedWcsCoverage": "wofs_filtered_summary"
+          },
+          {
+              "id": "c170c834",
+              "name": "Yearly water observations",
+              "layers": "wofs_annual_summary_statistics",
+              "url": "https://ows.services.dea.ga.gov.au/",
+              "type": "wms",
+              "useOwnClock": true,
+              "ignoreUnknownTileErrors": true,
+              "opacity": 1
+          },
+          {
+              "id": "722dc4c3",
+              "name": "November-March water observations",
+              "layers": "wofs_nov_mar_summary_statistics",
+              "url": "https://ows.services.dea.ga.gov.au/",
+              "type": "wms",
+              "useOwnClock": true,
+              "ignoreUnknownTileErrors": true,
+              "opacity": 1
+          },
+          {
+              "id": "c0ee6330",
+              "name": "April-October water observations",
+              "layers": "wofs_apr_oct_summary_statistics",
+              "url": "https://ows.services.dea.ga.gov.au/",
+              "type": "wms",
+              "useOwnClock": true,
+              "ignoreUnknownTileErrors": true,
+              "opacity": 1
+          },
+          {
+            "name": "WOfS underlying data",
+            "type": "group",
+            "preserveOrder": true,
+            "items": [
+                {
+                    "name": "All water observations combined",
+                    "type": "group",
+                    "preserveOrder": true,
+                    "items": [
+                        {
+                            "id": "5e03b911",
+                            "name": "Clear Observations",
+                            "layers": "wofs_summary_clear",
+                            "url": "https://ows.services.dea.ga.gov.au/",
+                            "type": "wms",
+                            "useOwnClock": true,
+                            "ignoreUnknownTileErrors": true,
+                            "opacity": 1,
+                            "linkedWcsUrl": "https://ows.services.dea.ga.gov.au/",
+                            "linkedWcsCoverage": "wofs_summary_clear"
+                        },
+                        {
+                            "id": "b9c0897e",
+                            "name": "Wet Observations",
+                            "layers": "wofs_summary_wet",
+                            "url": "https://ows.services.dea.ga.gov.au/",
+                            "type": "wms",
+                            "useOwnClock": true,
+                            "ignoreUnknownTileErrors": true,
+                            "opacity": 1,
+                            "linkedWcsUrl": "https://ows.services.dea.ga.gov.au/",
+                            "linkedWcsCoverage": "wofs_summary_wet"
+                        },
+                        {
+                            "id": "31776bb0",
+                            "name": "Summary of Observations",
+                            "layers": "Water Observations from Space Statistics",
+                            "url": "https://ows.services.dea.ga.gov.au/",
+                            "type": "wms",
+                            "useOwnClock": true,
+                            "ignoreUnknownTileErrors": true,
+                            "opacity": 1,
+                            "linkedWcsUrl": "https://ows.services.dea.ga.gov.au/",
+                            "linkedWcsCoverage": "Water Observations from Space Statistics"
+                        },
+                        {
+                            "id": "2546f9ab",
+                            "name": "Confidence",
+                            "layers": "wofs_filtered_summary_confidence",
+                            "url": "https://ows.services.dea.ga.gov.au/",
+                            "type": "wms",
+                            "useOwnClock": true,
+                            "ignoreUnknownTileErrors": true,
+                            "opacity": 1,
+                            "linkedWcsUrl": "https://ows.services.dea.ga.gov.au/",
+                            "linkedWcsCoverage": "wofs_filtered_summary_confidence"
+                        }
+                    ]
+                },
+                {
+                    "name": "Yearly water observations",
+                    "type": "group",
+                    "items": [
+                        {
+                            "id": "2cafc485",
+                            "name": "Clear Observations",
+                            "layers": "wofs_annual_summary_clear",
+                            "url": "https://ows.services.dea.ga.gov.au/",
+                            "type": "wms",
+                            "useOwnClock": true,
+                            "ignoreUnknownTileErrors": true,
+                            "opacity": 1
+                        },
+                        {
+                            "id": "9b97f045",
+                            "name": "Wet Observations",
+                            "layers": "wofs_annual_summary_wet",
+                            "url": "https://ows.services.dea.ga.gov.au/",
+                            "type": "wms",
+                            "useOwnClock": true,
+                            "ignoreUnknownTileErrors": true,
+                            "opacity": 1
+                        },
+                    ]
+                },
+                {
+                    "name": "April-October water observations",
+                    "type": "group",
+                    "items": [
+                        {
+                            "id": "6b31f15d",
+                            "name": "Clear Observations",
+                            "layers": "wofs_apr_oct_summary_clear",
+                            "url": "https://ows.services.dea.ga.gov.au/",
+                            "type": "wms",
+                            "useOwnClock": true,
+                            "ignoreUnknownTileErrors": true,
+                            "opacity": 1
+                        },
+                        {
+                            "id": "9140c499",
+                            "name": "Wet Observations",
+                            "layers": "wofs_apr_oct_summary_wet",
+                            "url": "https://ows.services.dea.ga.gov.au/",
+                            "type": "wms",
+                            "useOwnClock": true,
+                            "ignoreUnknownTileErrors": true,
+                            "opacity": 1
+                        },
+                    ]
+                },
+                {
+                    "name": "November-March water observations",
+                    "type": "group",
+                    "items": [
+                        {
+                            "id": "a9759c22",
+                            "name": "Clear Observations",
+                            "layers": "wofs_nov_mar_summary_clear",
+                            "url": "https://ows.services.dea.ga.gov.au/",
+                            "type": "wms",
+                            "useOwnClock": true,
+                            "ignoreUnknownTileErrors": true,
+                            "opacity": 1
+                        },
+                        {
+                            "id": "4bd6f4fd",
+                            "name": "Wet Observations",
+                            "layers": "wofs_nov_mar_summary_wet",
+                            "url": "https://ows.services.dea.ga.gov.au/",
+                            "type": "wms",
+                            "useOwnClock": true,
+                            "ignoreUnknownTileErrors": true,
+                            "opacity": 1
+                        },
+                    ]
+                },
+            ]
+          }
+      ]
+    },
+  ],
+  "type": "group",
+  "name": "Water"
+}
