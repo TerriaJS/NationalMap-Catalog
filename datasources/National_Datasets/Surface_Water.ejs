@@ -1,6 +1,5 @@
         {
           "items": [
-            <%- include('includes/dga_org', { name: 'Australian Institute of Marine Science', org: 'australian-institute-of-marine-science' }) %>,
             <% include Coastal %>,
             {
               "name": "Individual Hydrology and Marine Layers",
@@ -10,18 +9,6 @@
                   "url": "http://services.ga.gov.au/gis/rest/services/NM_Hydrology_and_Marine_Polygons/MapServer",
                   "layers": "Foreshore_Flats,No_Data",
                   "name": "Foreshore Flats",
-                  "type": "esri-mapServer",
-                  "info": [
-                    {
-                      "name": "Licence",
-                      "content": "[Creative Commons Attribution 4.0 International (CC BY 4.0)](http://creativecommons.org/licenses/by/4.0/)"
-                    }
-                  ]
-                },
-                {
-                  "url": "http://services.ga.gov.au/gis/rest/services/NM_Hydrology_and_Marine_Polygons/MapServer",
-                  "layers": "Flats_SalineCoastalFlats,No_Data",
-                  "name": "Saline Coastal Flats",
                   "type": "esri-mapServer",
                   "info": [
                     {
@@ -58,18 +45,6 @@
                   "url": "http://services.ga.gov.au/gis/rest/services/NM_Culture_and_Infrastructure/MapServer",
                   "layers": "Water_Pipelines,No_Data",
                   "name": "Water Pipelines",
-                  "type": "esri-mapServer",
-                  "info": [
-                    {
-                      "name": "Licence",
-                      "content": "[Creative Commons Attribution 4.0 International (CC BY 4.0)](http://creativecommons.org/licenses/by/4.0/)"
-                    }
-                  ]
-                },
-                {
-                  "url": "http://services.ga.gov.au/gis/rest/services/NM_Hydrology_and_Marine_Polygons/MapServer",
-                  "layers": "Flats_MarineSwamps_Labels,Flats_MarineSwamps,No_Data",
-                  "name": "Marine Swamps",
                   "type": "esri-mapServer",
                   "info": [
                     {
@@ -299,27 +274,6 @@
                 }
               ]
             },
-            {
-              "name": "Bathymetry",
-              "type": "group",
-              "items": [
-                {
-                  "name": "Geoscience Australia Marine Data (WMS)",
-                  "type": "wms-getCapabilities",
-                  "url": "http://marine.ga.gov.au/geoserver/marine/wms",
-                  "dataUrl": "http://marine.ga.gov.au/geoserver/marine/wfs",
-                  "dataUrlType": "wfs-getCapabilities",
-                  "itemProperties": {
-                    "linkedWcsUrl": "http://marine.ga.gov.au/geoserver/marine/wcs"
-                  }
-                },
-                {
-                  "name": "Geoscience Australia Marine Data (WFS)",
-                  "type": "wfs-getCapabilities",
-                  "url": "http://marine.ga.gov.au/geoserver/marine/wfs"
-                }
-              ]
-            }
           ],
           "name": "Surface Water and Marine",
           "type": "group"
