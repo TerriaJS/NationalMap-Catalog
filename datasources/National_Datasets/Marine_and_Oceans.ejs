@@ -1,7 +1,11 @@
 {
   "items": [
-    <%- include('includes/dga_org', { name: 'Australian Institute of Marine Science', org: 'australian-institute-of-marine-science' }) %>,
     <%- include includes/Coastal %>,
+    {
+      "name": "Australian Institute of Marine Science",
+      "type": "wms-getCapabilities",
+      "url": "http://maps.aims.gov.au/geoserver/wms"
+    },
     {
       "name": "Individual Hydrology and Marine Layers",
       "type": "group",
