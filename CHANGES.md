@@ -2,6 +2,11 @@
 Change Log
 ==========
 
+### Next Changes
+
+* Renamed `Land` category to `Land Cover and Land Use`, and reorganised its contents
+* Reassigned the contents of `Surface Water and Marine` and `Ground Water` to two new categories, `Water` and `Marine and Oceans`, accordingly
+
 ### 2019-08-14-updated-2019-09-25
 
 * Updated the URL of Tasmanian Government LIST services to use HTTPS and MapServer rather than ImageServer endpoints
