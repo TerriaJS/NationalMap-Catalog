@@ -1,0 +1,63 @@
+{
+  "items": [
+    <%- include includes/Coastal %>,
+    {
+      "name": "Australian Institute of Marine Science",
+      "type": "wms-getCapabilities",
+      "url": "http://maps.aims.gov.au/geoserver/wms"
+    },
+    {
+      "name": "Individual Hydrology and Marine Layers",
+      "type": "group",
+      "items": [
+        {
+          "url": "http://services.ga.gov.au/gis/rest/services/NM_Hydrology_and_Marine_Polygons/MapServer",
+          "layers": "Flats_MarineSwamps_Labels,Flats_MarineSwamps,No_Data",
+          "name": "Marine Swamps",
+          "type": "esri-mapServer",
+          "info": [
+            {
+              "name": "Licence",
+              "content": "[Creative Commons Attribution 4.0 International (CC BY 4.0)](http://creativecommons.org/licenses/by/4.0/)"
+            }
+          ]
+        },
+        {
+          "url": "http://services.ga.gov.au/gis/rest/services/NM_Hydrology_and_Marine_Polygons/MapServer",
+          "layers": "Flats_SalineCoastalFlats,No_Data",
+          "name": "Saline Coastal Flats",
+          "type": "esri-mapServer",
+          "info": [
+            {
+              "name": "Licence",
+              "content": "[Creative Commons Attribution 4.0 International (CC BY 4.0)](http://creativecommons.org/licenses/by/4.0/)"
+            }
+          ]
+        },
+      ]
+    },
+    {
+      "name": "Bathymetry",
+      "type": "group",
+      "items": [
+        {
+          "name": "Geoscience Australia Marine Data (WMS)",
+          "type": "wms-getCapabilities",
+          "url": "http://marine.ga.gov.au/geoserver/marine/wms",
+          "dataUrl": "http://marine.ga.gov.au/geoserver/marine/wfs",
+          "dataUrlType": "wfs-getCapabilities",
+          "itemProperties": {
+            "linkedWcsUrl": "http://marine.ga.gov.au/geoserver/marine/wcs"
+          }
+        },
+        {
+          "name": "Geoscience Australia Marine Data (WFS)",
+          "type": "wfs-getCapabilities",
+          "url": "http://marine.ga.gov.au/geoserver/marine/wfs"
+        }
+      ]
+    }
+  ],
+  "type": "group",
+  "name": "Marine and Oceans"
+}
