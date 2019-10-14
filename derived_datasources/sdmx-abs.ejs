@@ -4962,15 +4962,15 @@
         <%- include("../datasources/includes/sdmx-abs-item", {
     "outerGroups": [
       "National Datasets",
-      "Land"
+      "Agriculture"
     ],
     "nameOutsideCatalog": null,
-    "group": "Agriculture and Mining",
+    "group": null,
     "subgroup": "Land Use and Cover in South Australia",
     "name": "Land Cover, changes between 2005 and 2011",
     "bys": null,
     "id": "ABS_LAND_COVER",
-    "subId": null,
+    "subId": "agr",
     "geoType": null,
     "hasState": null,
     "singleValuedDimensionIds": null,
@@ -4994,15 +4994,15 @@
         <%- include("../datasources/includes/sdmx-abs-item", {
     "outerGroups": [
       "National Datasets",
-      "Land"
+      "Agriculture"
     ],
     "nameOutsideCatalog": null,
-    "group": "Agriculture and Mining",
+    "group": null,
     "subgroup": null,
     "name": "Land Management Practices Survey 2011-2012",
     "bys": null,
     "id": "ABS_LAMPS",
-    "subId": null,
+    "subId": "agr",
     "geoType": null,
     "hasState": null,
     "singleValuedDimensionIds": [
@@ -5029,15 +5029,15 @@
         <%- include("../datasources/includes/sdmx-abs-item", {
     "outerGroups": [
       "National Datasets",
-      "Land"
+      "Agriculture"
     ],
     "nameOutsideCatalog": null,
-    "group": "Agriculture and Mining",
+    "group": null,
     "subgroup": null,
     "name": "Land Management Practices Survey 2013-2014",
     "bys": null,
     "id": "ABS_LAMPS2014",
-    "subId": null,
+    "subId": "agr",
     "geoType": null,
     "hasState": null,
     "singleValuedDimensionIds": [
@@ -5064,15 +5064,151 @@
         <%- include("../datasources/includes/sdmx-abs-item", {
     "outerGroups": [
       "National Datasets",
-      "Land"
+      "Agriculture"
     ],
     "nameOutsideCatalog": null,
-    "group": "Agriculture and Mining",
+    "group": null,
     "subgroup": "Land Use and Cover in South Australia",
     "name": "Land Use, changes between 2006 and 2011",
     "bys": null,
     "id": "ABS_LAND_USE",
-    "subId": null,
+    "subId": "agr",
+    "geoType": null,
+    "hasState": null,
+    "singleValuedDimensionIds": [
+      "MEASURE"
+    ],
+    "sexId": null,
+    "ageId": null,
+    "regionDimensionId": "NRM_2012",
+    "regionNameTemplate": null,
+    "series": null,
+    "regionType": "nrmr",
+    "measureWhitelist": null,
+    "measureTotalValueIds": null,
+    "measureSelectedInitially": null,
+    "blacklist": {
+      "LU_11": [
+        "T"
+      ]
+    },
+    "cannotSum": null,
+    "description": null
+        }) %>,
+        <%- include("../datasources/includes/sdmx-abs-item", {
+    "outerGroups": [
+      "National Datasets",
+      "Land Cover and Land Use"
+    ],
+    "nameOutsideCatalog": null,
+    "group": "Land Use and Cover",
+    "subgroup": "Land Use and Cover in South Australia",
+    "name": "Land Cover, changes between 2005 and 2011",
+    "bys": null,
+    "id": "ABS_LAND_COVER",
+    "subId": "lclu",
+    "geoType": null,
+    "hasState": null,
+    "singleValuedDimensionIds": null,
+    "sexId": null,
+    "ageId": null,
+    "regionDimensionId": "NRM_2012",
+    "regionNameTemplate": null,
+    "series": null,
+    "regionType": "nrmr",
+    "measureWhitelist": null,
+    "measureTotalValueIds": null,
+    "measureSelectedInitially": null,
+    "blacklist": {
+      "DLC_11": [
+        "T"
+      ]
+    },
+    "cannotSum": null,
+    "description": null
+        }) %>,
+        <%- include("../datasources/includes/sdmx-abs-item", {
+    "outerGroups": [
+      "National Datasets",
+      "Land Cover and Land Use"
+    ],
+    "nameOutsideCatalog": null,
+    "group": "Land Use and Cover",
+    "subgroup": null,
+    "name": "Land Management Practices Survey 2011-2012",
+    "bys": null,
+    "id": "ABS_LAMPS",
+    "subId": "lclu",
+    "geoType": null,
+    "hasState": null,
+    "singleValuedDimensionIds": [
+      "MEASURE",
+      "MGT_PRACTICE"
+    ],
+    "sexId": null,
+    "ageId": null,
+    "regionDimensionId": null,
+    "regionNameTemplate": null,
+    "series": null,
+    "regionType": "ste",
+    "measureWhitelist": null,
+    "measureTotalValueIds": null,
+    "measureSelectedInitially": null,
+    "blacklist": {
+      "MGT_PRACTICE": [
+        "HEADER_.+"
+      ]
+    },
+    "cannotSum": "This dataset presents detailed information on agricultural land management practices used on Australian farms, using data collected from the 2011-12 Land Management Practices Survey (LaMPS). Explanatory notes are available [here](http://www.abs.gov.au/AUSSTATS/abs@.nsf/Lookup/4630.0Explanatory%20Notes12011-12?OpenDocument).\\n\\nNote that ACT is included in the NSW figures.\\n\\n",
+    "description": null
+        }) %>,
+        <%- include("../datasources/includes/sdmx-abs-item", {
+    "outerGroups": [
+      "National Datasets",
+      "Land Cover and Land Use"
+    ],
+    "nameOutsideCatalog": null,
+    "group": "Land Use and Cover",
+    "subgroup": null,
+    "name": "Land Management Practices Survey 2013-2014",
+    "bys": null,
+    "id": "ABS_LAMPS2014",
+    "subId": "lclu",
+    "geoType": null,
+    "hasState": null,
+    "singleValuedDimensionIds": [
+      "MEASURE",
+      "MGT_PRACTICE"
+    ],
+    "sexId": null,
+    "ageId": null,
+    "regionDimensionId": "REGION_ACZ",
+    "regionNameTemplate": null,
+    "series": null,
+    "regionType": "ste",
+    "measureWhitelist": null,
+    "measureTotalValueIds": null,
+    "measureSelectedInitially": null,
+    "blacklist": {
+      "MGT_PRACTICE": [
+        "HEADER_.+"
+      ]
+    },
+    "cannotSum": "This dataset presents detailed information on agricultural land management practices used on Australian farms, using data collected from the 2013-2014 Land Management Practices Survey (LaMPS). Explanatory notes are available [here](http://www.abs.gov.au/Ausstats/abs@.nsf/Previousproducts/4627.0Explanatory%20Notes12013-14). \\n\\nNote that ACT is included in the NSW figures.\\n\\n",
+    "description": null
+        }) %>,
+        <%- include("../datasources/includes/sdmx-abs-item", {
+    "outerGroups": [
+      "National Datasets",
+      "Land Cover and Land Use"
+    ],
+    "nameOutsideCatalog": null,
+    "group": "Land Use and Cover",
+    "subgroup": "Land Use and Cover in South Australia",
+    "name": "Land Use, changes between 2006 and 2011",
+    "bys": null,
+    "id": "ABS_LAND_USE",
+    "subId": "lclu",
     "geoType": null,
     "hasState": null,
     "singleValuedDimensionIds": [
@@ -5200,10 +5336,38 @@
         <%- include("../datasources/includes/sdmx-abs-item", {
     "outerGroups": [
       "National Datasets",
-      "Land"
+      "Agriculture"
     ],
     "nameOutsideCatalog": null,
-    "group": "Agriculture and Mining",
+    "group": null,
+    "subgroup": "Land Use and Cover in South Australia",
+    "name": "Monetary account for land use, between 2006 and 2011",
+    "bys": null,
+    "id": "ABS_MONETARY_ACCOUNT",
+    "subId": "agr",
+    "geoType": null,
+    "hasState": null,
+    "singleValuedDimensionIds": null,
+    "sexId": null,
+    "ageId": null,
+    "regionDimensionId": "NRM_2012",
+    "regionNameTemplate": null,
+    "series": null,
+    "regionType": "nrmr",
+    "measureWhitelist": null,
+    "measureTotalValueIds": null,
+    "measureSelectedInitially": null,
+    "blacklist": null,
+    "cannotSum": null,
+    "description": null
+        }) %>,
+        <%- include("../datasources/includes/sdmx-abs-item", {
+    "outerGroups": [
+      "National Datasets",
+      "Land Cover and Land Use"
+    ],
+    "nameOutsideCatalog": null,
+    "group": "Mining",
     "subgroup": null,
     "name": "Mineral Exploration",
     "bys": null,
@@ -5233,15 +5397,15 @@
         <%- include("../datasources/includes/sdmx-abs-item", {
     "outerGroups": [
       "National Datasets",
-      "Land"
+      "Land Cover and Land Use"
     ],
     "nameOutsideCatalog": null,
-    "group": "Agriculture and Mining",
+    "group": "Land Use and Cover",
     "subgroup": "Land Use and Cover in South Australia",
     "name": "Monetary account for land use, between 2006 and 2011",
     "bys": null,
     "id": "ABS_MONETARY_ACCOUNT",
-    "subId": null,
+    "subId": "lclu",
     "geoType": null,
     "hasState": null,
     "singleValuedDimensionIds": null,
@@ -5425,10 +5589,66 @@
         <%- include("../datasources/includes/sdmx-abs-item", {
     "outerGroups": [
       "National Datasets",
-      "Land"
+      "Agriculture"
     ],
     "nameOutsideCatalog": null,
-    "group": "Agriculture and Mining",
+    "group": null,
+    "subgroup": "Land Use and Cover in South Australia",
+    "name": "Physical account for land cover, between 2006 and 2011",
+    "bys": null,
+    "id": "ABS_PHYSICAL_ACCOUNT_LC",
+    "subId": "agr",
+    "geoType": null,
+    "hasState": null,
+    "singleValuedDimensionIds": null,
+    "sexId": null,
+    "ageId": null,
+    "regionDimensionId": "NRM_2012",
+    "regionNameTemplate": null,
+    "series": null,
+    "regionType": "nrmr",
+    "measureWhitelist": null,
+    "measureTotalValueIds": null,
+    "measureSelectedInitially": null,
+    "blacklist": null,
+    "cannotSum": null,
+    "description": null
+        }) %>,
+        <%- include("../datasources/includes/sdmx-abs-item", {
+    "outerGroups": [
+      "National Datasets",
+      "Agriculture"
+    ],
+    "nameOutsideCatalog": null,
+    "group": null,
+    "subgroup": "Land Use and Cover in South Australia",
+    "name": "Physical account for land use, between 2006 to 2011",
+    "bys": null,
+    "id": "ABS_PHYSICAL_ACCOUNT_LU",
+    "subId": "agr",
+    "geoType": null,
+    "hasState": null,
+    "singleValuedDimensionIds": null,
+    "sexId": null,
+    "ageId": null,
+    "regionDimensionId": "NRM_2012",
+    "regionNameTemplate": null,
+    "series": null,
+    "regionType": "nrmr",
+    "measureWhitelist": null,
+    "measureTotalValueIds": null,
+    "measureSelectedInitially": null,
+    "blacklist": null,
+    "cannotSum": null,
+    "description": null
+        }) %>,
+        <%- include("../datasources/includes/sdmx-abs-item", {
+    "outerGroups": [
+      "National Datasets",
+      "Land Cover and Land Use"
+    ],
+    "nameOutsideCatalog": null,
+    "group": "Mining",
     "subgroup": null,
     "name": "Petroleum Exploration",
     "bys": null,
@@ -5465,15 +5685,15 @@
         <%- include("../datasources/includes/sdmx-abs-item", {
     "outerGroups": [
       "National Datasets",
-      "Land"
+      "Land Cover and Land Use"
     ],
     "nameOutsideCatalog": null,
-    "group": "Agriculture and Mining",
+    "group": "Land Use and Cover",
     "subgroup": "Land Use and Cover in South Australia",
     "name": "Physical account for land cover, between 2006 and 2011",
     "bys": null,
     "id": "ABS_PHYSICAL_ACCOUNT_LC",
-    "subId": null,
+    "subId": "lclu",
     "geoType": null,
     "hasState": null,
     "singleValuedDimensionIds": null,
@@ -5493,15 +5713,15 @@
         <%- include("../datasources/includes/sdmx-abs-item", {
     "outerGroups": [
       "National Datasets",
-      "Land"
+      "Land Cover and Land Use"
     ],
     "nameOutsideCatalog": null,
-    "group": "Agriculture and Mining",
+    "group": "Land Use and Cover",
     "subgroup": "Land Use and Cover in South Australia",
     "name": "Physical account for land use, between 2006 to 2011",
     "bys": null,
     "id": "ABS_PHYSICAL_ACCOUNT_LU",
-    "subId": null,
+    "subId": "lclu",
     "geoType": null,
     "hasState": null,
     "singleValuedDimensionIds": null,
@@ -5718,10 +5938,10 @@
         <%- include("../datasources/includes/sdmx-abs-item", {
     "outerGroups": [
       "National Datasets",
-      "Land"
+      "Agriculture"
     ],
     "nameOutsideCatalog": null,
-    "group": "Agriculture and Mining",
+    "group": null,
     "subgroup": null,
     "name": "Water Use on Australian Farms",
     "bys": null,
@@ -5786,15 +6006,51 @@
         <%- include("../datasources/includes/sdmx-abs-item", {
     "outerGroups": [
       "National Datasets",
-      "Land"
+      "Agriculture"
     ],
     "nameOutsideCatalog": null,
-    "group": "Agriculture and Mining",
+    "group": null,
     "subgroup": null,
     "name": "Land Use - Agricultural Commodities 2011",
     "bys": null,
     "id": "ABS_REGIONAL_ASGS",
-    "subId": "AGRIC",
+    "subId": "AGRIC_agr",
+    "geoType": "SAx",
+    "hasState": null,
+    "singleValuedDimensionIds": [
+      "MEASURE"
+    ],
+    "sexId": null,
+    "ageId": null,
+    "regionDimensionId": null,
+    "regionNameTemplate": "{{name}}_code_2011",
+    "series": null,
+    "regionType": null,
+    "measureWhitelist": [
+      "AGRIC_.*"
+    ],
+    "measureTotalValueIds": null,
+    "measureSelectedInitially": null,
+    "blacklist": {
+      "MEASURE": [
+        "AGRIC_[12]"
+      ]
+    },
+    "cannotSum": null,
+    "description": "Explanatory notes are available [here](http://www.abs.gov.au/AUSSTATS/abs@.nsf/Lookup/1379.0.55.001Explanatory%20Notes12009-13?OpenDocument)."
+        }) %>,
+        <%- include("../datasources/includes/sdmx-abs-item", {
+    "outerGroups": [
+      "National Datasets",
+      "Land Cover and Land Use"
+    ],
+    "nameOutsideCatalog": null,
+    "group": "Land Use and Cover",
+    "subgroup": null,
+    "name": "Land Use - Agricultural Commodities 2011",
+    "bys": null,
+    "id": "ABS_REGIONAL_ASGS",
+    "subId": "AGRIC_lclu",
     "geoType": "SAx",
     "hasState": null,
     "singleValuedDimensionIds": [
@@ -5960,15 +6216,51 @@
         <%- include("../datasources/includes/sdmx-abs-item", {
     "outerGroups": [
       "National Datasets",
-      "Land"
+      "Agriculture"
     ],
     "nameOutsideCatalog": null,
-    "group": "Agriculture and Mining",
+    "group": null,
     "subgroup": null,
     "name": "Land Use - Agricultural Commodities 2011 and 2016",
     "bys": null,
     "id": "ABS_REGIONAL_ASGS2016",
-    "subId": "AGRIC",
+    "subId": "AGRIC_agr",
+    "geoType": "SAx",
+    "hasState": null,
+    "singleValuedDimensionIds": [
+      "MEASURE"
+    ],
+    "sexId": null,
+    "ageId": null,
+    "regionDimensionId": "ASGS_2016",
+    "regionNameTemplate": "{{name}}_code_2016",
+    "series": null,
+    "regionType": null,
+    "measureWhitelist": [
+      "AGRIC_.*"
+    ],
+    "measureTotalValueIds": null,
+    "measureSelectedInitially": null,
+    "blacklist": {
+      "MEASURE": [
+        "AGRIC_[12]"
+      ]
+    },
+    "cannotSum": "Explanatory notes are available [here](http://www.abs.gov.au/AUSSTATS/abs@.nsf/Lookup/1379.0.55.001Explanatory%20Notes12009-13?OpenDocument).",
+    "description": null
+        }) %>,
+        <%- include("../datasources/includes/sdmx-abs-item", {
+    "outerGroups": [
+      "National Datasets",
+      "Land Cover and Land Use"
+    ],
+    "nameOutsideCatalog": null,
+    "group": "Land Use and Cover",
+    "subgroup": null,
+    "name": "Land Use - Agricultural Commodities 2011 and 2016",
+    "bys": null,
+    "id": "ABS_REGIONAL_ASGS2016",
+    "subId": "AGRIC_lclu",
     "geoType": "SAx",
     "hasState": null,
     "singleValuedDimensionIds": [
