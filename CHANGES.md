@@ -7,6 +7,7 @@ Change Log
 * Renamed `Land` category to `Land Cover and Land Use`, and reorganised its contents
 * Reassigned the contents of `Surface Water and Marine` and `Ground Water` to two new categories, `Water` and `Marine and Oceans`, accordingly
 * Added new `Water Stations Data` under `Water > Surface Water`
+* Added `CDP Regions (2017)` under `National Boundaries`
 
 ### 2019-08-14-updated-2019-09-25
 
