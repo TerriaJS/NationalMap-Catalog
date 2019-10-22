@@ -2,7 +2,7 @@
 Change Log
 ==========
 
-### Next Changes
+### 2019-10-22
 
 * Renamed `Land` category to `Land Cover and Land Use`, and reorganised its contents
 * Reassigned the contents of `Surface Water and Marine` and `Ground Water` to two new categories, `Water` and `Marine and Oceans`, accordingly
