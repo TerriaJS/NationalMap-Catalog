@@ -2,6 +2,11 @@
 Change Log
 ==========
 
+### 2019-10-31
+
+* Filtered hydro station layers by list provided by GA
+* Removed 32 day duration on daily satellite observations
+
 ### 2019-10-22
 
 * Renamed `Land` category to `Land Cover and Land Use`, and reorganised its contents
