@@ -395,7 +395,31 @@
                       "opacity": 1,
                       "linkedWcsUrl": "https://ows.services.dea.ga.gov.au/",
                       "linkedWcsCoverage": "ls8_barest_earth_mosaic"
+                    },
+                    {
+                      "name": "Landsat 30+ Barest Earth Satellite Images (Combined Landsat)",
+                      "type": "wms",
+                      "layers": "landsat_barest_earth",
+                      "url": "https://ows.services.dea.ga.gov.au/",
+                      "linkedWcsUrl": "https://ows.services.dea.ga.gov.au/",
+                      "linkedWcsCoverage": "landsat_barest_earth",
+                      "ignoreUnknownTileErrors": true,
+                      "chartType": "momentPoints",
+                      "chartColor": "white",
+                      "opacity": 1,
+                      "featureInfoTemplate": {
+                          "formats": {
+                            "lat": {
+                                "maximumFractionDigits": 5
+                            },
+                            "lon": {
+                                "maximumFractionDigits": 5
+                            }
+                          }
+                      },
+                      "leafletUpdateInterval": 750
                     }
+
                   ]
                 }
               ]
