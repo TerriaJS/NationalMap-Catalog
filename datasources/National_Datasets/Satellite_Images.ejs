@@ -3,6 +3,36 @@
           "type": "group",
           "items": [
             {
+              "name":"Hotspots",
+              "type": "group",
+              "preserveOrder": true,
+              "items" :[
+                 {
+                    "name": "Himawari-8 Mosaic, Last 10m",
+                    "type": "wms",
+                    "url": "https://hotspots.dea.ga.gov.au/geoserver/ows",
+                    "layers": "public:himawari8_mosaic",
+                    "ignoreUnknownTileErrors": true,
+                    "opacity": 1,
+                    "leafletUpdateInterval": 750,
+                    "legendUrls": []
+                 },
+                 {
+                    "name": "Hotspots, Last 24h",
+                    "type": "wms",
+                    "url": "https://hotspots.dea.ga.gov.au/geoserver/ows",
+                    "layers": "public:hotspots_three_days",
+                    "ignoreUnknownTileErrors": true,
+                    "opacity": 1,
+                    "leafletUpdateInterval": 750,
+                    "legendUrls": [],
+                    "parameters": {
+                       "cql_filter":"hours_since_hotspot<=24 AND sensor IN ('AVHRR','MODIS','VIIRS') AND product IN ('SRSS','MOD14','AFMOD','EDR')"
+                    }
+                 }
+              ]
+            },
+            {
               "name": "Satellite Images 10m pixels",
               "type": "group",
               "items": [
@@ -197,31 +227,44 @@
                   "type": "group",
                   "items": [
                     {
-                      "id": "b7c1ecb3",
-                      "name": "Landsat and Sentinel-2 Blended Service True Colour",
+                      "id": "7b2da18f",
+                      "name": "Landsat and Sentinel 2 surface reflectance (Beta)",
                       "url": "https://gsky.nci.org.au/ows/dea",
-                      "layers": "blend_sentinel2_landsat_nbart_daily_true_colour",
+                      "layers": "blend_sentinel2_landsat_nbart_daily",
                       "linkedWcsUrl": "https://gsky.nci.org.au/ows/dea",
-                      "linkedWcsCoverage": "blend_sentinel2_landsat_nbart_daily_true_colour",
+                      "linkedWcsCoverage": "blend_sentinel2_landsat_nbart_daily",
                       "type": "wms",
                       "ignoreUnknownTileErrors": true,
                       "useOwnClock": true,
                       "opacity": 1,
                       "featureTimesProperty": "data_available_for_dates"
                     },
-                    {
-                      "id": "fe88226a",
-                      "name": "Landsat and Sentinel-2 Blended Service False Colour",
-                      "url": "https://gsky.nci.org.au/ows/dea",
-                      "layers": "blend_sentinel2_landsat_nbart_daily_false_colour",
-                      "linkedWcsUrl": "https://gsky.nci.org.au/ows/dea",
-                      "linkedWcsCoverage": "blend_sentinel2_landsat_nbart_daily_false_colour",
-                      "type": "wms",
-                      "ignoreUnknownTileErrors": true,
-                      "useOwnClock": true,
-                      "opacity": 1,
-                      "featureTimesProperty": "data_available_for_dates"
-                    }
+                    // {
+                    //   "id": "b7c1ecb3",
+                    //   "name": "Landsat and Sentinel-2 Blended Service True Colour",
+                    //   "url": "https://gsky.nci.org.au/ows/dea",
+                    //   "layers": "blend_sentinel2_landsat_nbart_daily_true_colour",
+                    //   "linkedWcsUrl": "https://gsky.nci.org.au/ows/dea",
+                    //   "linkedWcsCoverage": "blend_sentinel2_landsat_nbart_daily_true_colour",
+                    //   "type": "wms",
+                    //   "ignoreUnknownTileErrors": true,
+                    //   "useOwnClock": true,
+                    //   "opacity": 1,
+                    //   "featureTimesProperty": "data_available_for_dates"
+                    // },
+                    // {
+                    //   "id": "fe88226a",
+                    //   "name": "Landsat and Sentinel-2 Blended Service False Colour",
+                    //   "url": "https://gsky.nci.org.au/ows/dea",
+                    //   "layers": "blend_sentinel2_landsat_nbart_daily_false_colour",
+                    //   "linkedWcsUrl": "https://gsky.nci.org.au/ows/dea",
+                    //   "linkedWcsCoverage": "blend_sentinel2_landsat_nbart_daily_false_colour",
+                    //   "type": "wms",
+                    //   "ignoreUnknownTileErrors": true,
+                    //   "useOwnClock": true,
+                    //   "opacity": 1,
+                    //   "featureTimesProperty": "data_available_for_dates"
+                    // }
                   ]
                 }
               ]
@@ -382,7 +425,31 @@
                       "opacity": 1,
                       "linkedWcsUrl": "https://ows.services.dea.ga.gov.au/",
                       "linkedWcsCoverage": "ls8_barest_earth_mosaic"
+                    },
+                    {
+                      "name": "Landsat 30+ Barest Earth Satellite Images (Combined Landsat)",
+                      "type": "wms",
+                      "layers": "landsat_barest_earth",
+                      "url": "https://ows.services.dea.ga.gov.au/",
+                      "linkedWcsUrl": "https://ows.services.dea.ga.gov.au/",
+                      "linkedWcsCoverage": "landsat_barest_earth",
+                      "ignoreUnknownTileErrors": true,
+                      "chartType": "momentPoints",
+                      "chartColor": "white",
+                      "opacity": 1,
+                      "featureInfoTemplate": {
+                          "formats": {
+                            "lat": {
+                                "maximumFractionDigits": 5
+                            },
+                            "lon": {
+                                "maximumFractionDigits": 5
+                            }
+                          }
+                      },
+                      "leafletUpdateInterval": 750
                     }
+
                   ]
                 }
               ]
