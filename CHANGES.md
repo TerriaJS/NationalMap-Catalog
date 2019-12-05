@@ -2,6 +2,12 @@
 Change Log
 ==========
 
+### 2019-12-05
+* Updated GSKY blended service
+* Added Barest Earth 30 years 
+* Added Forests of Australia (2018)
+* Added GA Sentinel hotspots
+
 ### 2019-10-31
 
 * Filtered hydro station layers by list provided by GA
