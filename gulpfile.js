@@ -27,12 +27,83 @@ if (!fs.existsSync(workDir)) {
     fs.mkdirSync(workDir);
 }
 
-gulp.task('build', ['render-datasource-templates', 'list-ga-services']);
-gulp.task('release', ['render-datasource-templates',/*'make-editor-schema', 'validate'*/]);
-gulp.task('watch', ['watch-datasource-templates']);
-gulp.task('default', ['build']);
+// Regenerate the anti-LGA filter in datasources/includes/lga_filter.ejs
+// Needs to be run manually every now and then.
+gulp.task('update-lga-filter', function(done) {
+    var requestp = require('request-promise');
+    console.log('Contacting data.gov.au');
+    return requestp({
+        url: 'https://data.gov.au/api/3/action/organization_list?all_fields=true&include_extras=true',
+        json: true
+    }).then(function(results) {
+        var filterFile = 'datasources/includes/lga_filter.ejs';
+        var r = results.result.filter( org => org.extras.filter(extra => extra.key === 'jurisdiction' && extra.value === 'Local Government').length > 0).map(org => 'organization:' + org.name);
+        fs.writeFileSync(filterFile, '<%# Generated automatically by gulpfile.js %>' + r.join(' OR '));
+        console.log('Updated filter from data.gov.au in ' + filterFile);
+    }).catch(function(e) {
+        console.error(e.message);
+    });
+    done()
+});
 
-gulp.task('list-ga-services', ['render-datasource-templates'], function() {
+gulp.task('render-datasource-templates', gulp.series('update-lga-filter', function(done) {
+// gulp.task('render-datasource-templates', function() {  // just for testing, removes update-lga-filter
+    var ejs = require('ejs');
+    var JSON5 = require('json5');
+    var convertSdmxCsvToEjs = require('./lib/convertSdmxCsvToEjs');
+
+    // Start by rendering the sdmx-abs catalog from the csv to ejs, which is an input to nm.ejs.
+    convertSdmxCsvToEjs(absSdmxCsvPath, derivedSourceDir + '/' + 'sdmx-abs.ejs');
+    testAndRead(sourceDir);
+
+    function testAndRead(dir) {
+        try {
+            fs.accessSync(dir);
+        } catch (e) {
+            // Datasources directory doesn't exist? No problem.
+            return;
+        }
+        fs.readdirSync(dir).forEach(processSource);
+        done()
+        function processSource(filename) {
+            if (filename.match(/\.ejs$/)) {
+                var templateFilename = path.join(dir, filename);
+                var template = fs.readFileSync(templateFilename, 'utf8');
+                var result = ejs.render(template, null, {filename: templateFilename});
+
+                // Remove new lines from inside quotes. This means you can add newlines to strings to help keep source files manageable, without breaking your JSON5.
+                // We can't remove _all_ new lines, since this would break comments in JSON5.
+                // NOTE: this replacement fails when there are unmatched quotes in comments - eg. apostrophes.
+                // If you want actual new lines displayed somewhere, you should probably use <br/> if it's HTML, or \n\n if it's Markdown.
+                // The first regex below finds text between quotes, which may include new lines.
+                // The second regex removes the new line characters from those matches, if any.
+                result = result.replace(/(["'])(?:(?!\1)[^\\]|\\.)*\1/g, match => match.replace(/(?:\r\n|\r|\n)/g, ''));
+
+                var outFilename = filename.replace('.ejs', '.json');
+                var resultJson = '', resultJson_big = '';
+                try {
+                    resultJson = JSON.stringify(JSON5.parse(result), null, 0);
+                    resultJson_big = JSON.stringify(JSON5.parse(result), null, 2);
+                    console.log('Rendered template ' + outFilename);
+                } catch (e) {
+                    if (e.name === 'SyntaxError') {
+                        var context = 20;
+                        console.error('Syntax error while processing templates: ' + e.message);
+                        console.error(result.substring(e.at - context, e.at + context));
+                        console.error(new Array(context + 1).join('-').substring(0, Math.min(e.at, context)) + '^');
+                    }
+                    console.warn('Warning: Rendered template ' + outFilename + ' is not valid JSON.');
+                }
+                fs.writeFileSync(path.join(targetDir, outFilename), new Buffer(resultJson));
+                // write a non-minified version too.
+                fs.writeFileSync(path.join(targetDir, filename.replace('.ejs', '_big.json')), new Buffer(resultJson_big));
+            }
+        }
+    }
+
+}));
+
+gulp.task('list-ga-services', gulp.series('render-datasource-templates', function(done) {
     const catalog = require('./build/nm.json');
 
     const urls = {};
@@ -58,7 +129,8 @@ gulp.task('list-ga-services', ['render-datasource-templates'], function() {
     fs.writeFileSync('./build/ga_services.txt',
         'These Geoscience Australia services are currently being referenced in the catalog.\n\n' +
         urlList.join('\n'));
-});
+    done()
+}));
 
 // Generate new schema for editor, and copy it over whatever version came with editor.
 /*
@@ -119,62 +191,6 @@ gulp.task('validate', ['merge-datasources', 'make-validator-schema'], function()
 
     "name": "<%= name %>"
  */
-gulp.task('render-datasource-templates', ['update-lga-filter'], function() {
-// gulp.task('render-datasource-templates', function() {  // just for testing, removes update-lga-filter
-    var ejs = require('ejs');
-    var JSON5 = require('json5');
-    var convertSdmxCsvToEjs = require('./lib/convertSdmxCsvToEjs');
-
-    // Start by rendering the sdmx-abs catalog from the csv to ejs, which is an input to nm.ejs.
-    convertSdmxCsvToEjs(absSdmxCsvPath, derivedSourceDir + '/' + 'sdmx-abs.ejs');
-    testAndRead(sourceDir);
-
-    function testAndRead(dir) {
-        try {
-            fs.accessSync(dir);
-        } catch (e) {
-            // Datasources directory doesn't exist? No problem.
-            return;
-        }
-        fs.readdirSync(dir).forEach(processSource);
-
-        function processSource(filename) {
-            if (filename.match(/\.ejs$/)) {
-                var templateFilename = path.join(dir, filename);
-                var template = fs.readFileSync(templateFilename, 'utf8');
-                var result = ejs.render(template, null, {filename: templateFilename});
-
-                // Remove new lines from inside quotes. This means you can add newlines to strings to help keep source files manageable, without breaking your JSON5.
-                // We can't remove _all_ new lines, since this would break comments in JSON5.
-                // NOTE: this replacement fails when there are unmatched quotes in comments - eg. apostrophes.
-                // If you want actual new lines displayed somewhere, you should probably use <br/> if it's HTML, or \n\n if it's Markdown.
-                // The first regex below finds text between quotes, which may include new lines.
-                // The second regex removes the new line characters from those matches, if any.
-                result = result.replace(/(["'])(?:(?!\1)[^\\]|\\.)*\1/g, match => match.replace(/(?:\r\n|\r|\n)/g, ''));
-
-                var outFilename = filename.replace('.ejs', '.json');
-                var resultJson = '', resultJson_big = '';
-                try {
-                    resultJson = JSON.stringify(JSON5.parse(result), null, 0);
-                    resultJson_big = JSON.stringify(JSON5.parse(result), null, 2);
-                    console.log('Rendered template ' + outFilename);
-                } catch (e) {
-                    if (e.name === 'SyntaxError') {
-                        var context = 20;
-                        console.error('Syntax error while processing templates: ' + e.message);
-                        console.error(result.substring(e.at - context, e.at + context));
-                        console.error(new Array(context + 1).join('-').substring(0, Math.min(e.at, context)) + '^');
-                    }
-                    console.warn('Warning: Rendered template ' + outFilename + ' is not valid JSON.');
-                }
-                fs.writeFileSync(path.join(targetDir, outFilename), new Buffer(resultJson));
-                // write a non-minified version too.
-                fs.writeFileSync(path.join(targetDir, filename.replace('.ejs', '_big.json')), new Buffer(resultJson_big));
-            }
-        }
-    }
-
-});
 
 gulp.task('get-abs-sdmx-metadata', function() {
     const sdmxJsonDataFlow = "http://stat.data.abs.gov.au/sdmx-json/dataflow/";
@@ -190,24 +206,11 @@ gulp.task('get-abs-sdmx-metadata', function() {
 });
 
 
-gulp.task('watch-datasource-templates', ['render-datasource-templates'], function() {
+gulp.task('watch-datasource-templates', gulp.series('render-datasource-templates', function() {
     return gulp.watch(['datasources/**/*.csv', 'datasources/**/*.ejs', 'datasources/*.json'], watchOptions, [ 'render-datasource-templates' ]);
-});
+}));
 
-// Regenerate the anti-LGA filter in datasources/includes/lga_filter.ejs
-// Needs to be run manually every now and then.
-gulp.task('update-lga-filter', function() {
-    var requestp = require('request-promise');
-    console.log('Contacting data.gov.au');
-    return requestp({
-        url: 'https://data.gov.au/api/3/action/organization_list?all_fields=true&include_extras=true',
-        json: true
-    }).then(function(results) {
-        var filterFile = 'datasources/includes/lga_filter.ejs';
-        var r = results.result.filter( org => org.extras.filter(extra => extra.key === 'jurisdiction' && extra.value === 'Local Government').length > 0).map(org => 'organization:' + org.name);
-        fs.writeFileSync(filterFile, '<%# Generated automatically by gulpfile.js %>' + r.join(' OR '));
-        console.log('Updated filter from data.gov.au in ' + filterFile);
-    }).catch(function(e) {
-        console.error(e.message);
-    });
-});
+gulp.task('build', gulp.series('render-datasource-templates', 'list-ga-services'));
+gulp.task('release', gulp.series('render-datasource-templates',/*'make-editor-schema', 'validate'*/));
+gulp.task('watch', gulp.series('watch-datasource-templates'));
+gulp.task('default', gulp.series('build'));
