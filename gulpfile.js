@@ -103,7 +103,7 @@ gulp.task('render-datasource-templates', gulp.series('update-lga-filter', functi
 
 }));
 
-gulp.task('list-ga-services', gulp.series('render-datasource-templates', function(done) {
+gulp.task('list-ga-services', function(done) {
     const catalog = require('./build/nm.json');
 
     const urls = {};
@@ -130,7 +130,7 @@ gulp.task('list-ga-services', gulp.series('render-datasource-templates', functio
         'These Geoscience Australia services are currently being referenced in the catalog.\n\n' +
         urlList.join('\n'));
     done()
-}));
+});
 
 // Generate new schema for editor, and copy it over whatever version came with editor.
 /*
