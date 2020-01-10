@@ -2,6 +2,9 @@
 Change Log
 ==========
 
+### 2020-01-10
+* Added a Emergency Management group with a range of datasets
+
 ### 2019-12-05
 * Updated GSKY blended service
 * Added Barest Earth 30 years 
