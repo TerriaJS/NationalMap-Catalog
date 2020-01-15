@@ -6,34 +6,100 @@
       "isOpen": false,
       "items": [
         {
-          "name": "NSW Rural Fire Service",
-          "type": "nsw-rfs",
-          "description": "This data is retrieved from the NSW RFS Fires Near Me website. Please refer to the RFS website for a comprehensive map. <br /><button class='nm-featureInfo-button'><a href='https://www.rfs.nsw.gov.au/fire-information/fires-near-me'>Fires Near Me app</a></button>",
-          "dataCustodian": "[NSW Rural Fire Service](https://www.rfs.nsw.gov.au/)",
-          "dataUrl": "http://www.rfs.nsw.gov.au/feeds/majorIncidents.json",
-          "dataUrlType": "direct"
+          "name": "NSW Datasets",
+          "description": "<p style=color: red;>For any emergency related decisions, users should call Triple Zero (000) and / or consult the State based applications and established alert communication channels. </p><p>These sources were used in the publication of data on NationalMap. Direct links to each data set source can be found in the “About this data” section. <ul><li><a href='https://www.rfs.nsw.gov.au/fire-information/fires-near-me'>NSW Rural Fire Service app - Fires Near Me</a></li><li><a href='https://www.rfs.nsw.gov.au/'>NSW Rural Fire Service website</a></li><li><a href='http://www.rfs.nsw.gov.au/news-and-media/stay-up-to-date/feeds'>NSW Rural Fire Service data feeds</a></li><li><a href='https://www.rfs.nsw.gov.au/about-us/contact-us'>NSW Rural Fire Service contact</a></li><li><a href='https://www.transport.nsw.gov.au/'>Transport for NSW</a></li><li><a href='https://www.livetraffic.com/desktop.html'>NSW Live Traffic</a></li></ul></p>",
+          "type": "group",
+          "preserveOrder": true,
+          "isOpen": false,
+          "items": [
+            {
+              "name": "NSW Rural Fire Service Major Incidents Feed",
+              "type": "nsw-rfs",
+              "description": "<p>This data is retrieved from the NSW RFS Fires Near Me website. Please refer to the RFS website for a comprehensive map.</p><p><button class='nm-featureInfo-button'><a href='https://www.rfs.nsw.gov.au/fire-information/fires-near-me'>Fires Near Me app</a></button></p>",
+              "dataCustodian": "[NSW Rural Fire Service](https://www.rfs.nsw.gov.au/)",
+              "dataUrl": "http://www.rfs.nsw.gov.au/feeds/majorIncidents.json",
+              "dataUrlType": "direct"
+            },
+            {
+              "name": "Live Traffic NSW",
+              "type": "nsw-live-traffic",
+              "description": "<p>This data is retrieved from the NSW Live Traffic website, it combines incidents and fire-related road information. For more information please refer to the Live Traffic NSW website for a comprehensive map.</p> <p><button class='nm-featureInfo-button'><a href='https://www.livetraffic.com/desktop.html'>NSW Live Traffic app</a></button></p>",
+              "dataCustodian": "[Transport for NSW](https://www.transport.nsw.gov.au/)",
+              "metadataUrl": "https://opendata.transport.nsw.gov.au/node/342/exploreapi"
+            },
+            {
+              "name": "NSW Bushfire Burnt Areas - Since 1 July 2019",
+              "type": "geojson",
+              "url": "https://services9.arcgis.com/ZFlIzBMHgtgl0EYj/arcgis/rest/services/NSW_Bushfire_Burnt_Areas_2019_and_2020/FeatureServer/0/query?where=1%3D1&outFields=*&f=geojson",
+              "description": "<p>This spatial webservice is a merge of wildfires across NSW since 1 July 2019.</p> <p>The fires have been exported from ICON periodically to capture all wildfires for the season. ICON - https://icon.rfs.nsw.gov.au/-is the centralised RFS website where all fire incident spatial data, information and products are uploaded. From there the data is used to populate the Fires Near Me app.</p><p>The layer originally contains many overlapping polygons so they have been dissolved and merged. As a result individual fire names and numbers have been lost.</p><p>Please note that the fire polygons in ICON capture the outer perimeter of the fire and therefore show worst case scenario. Internal unburnt areas are mostly not captured while the fire is still going.</p><p>The VerDate field in the attribute table contains the date that the fires were captured to - currently 10 January 2020</p>",
+              "dataCustodian": "[EMSINA](https://www.emsina.org/)",
+              "metadataUrl": "https://bushfires-esriau.hub.arcgis.com/datasets/6f5565fc533249fd87fd294410438829_0",
+              "style": {
+                "fill": "#ff0000"
+              }
+            }
+          ]
         },
         {
-          "name": "Live Traffic NSW",
-          "type": "nsw-live-traffic",
-          "description": "This data is retrieved from the NSW Live Traffic website, it combines incidents and fire-related road information. For more information please refer to the Live Traffic NSW website for a comprehensive map. <button class='nm-featureInfo-button'><a href='https://www.livetraffic.com/desktop.html'>NSW Live Traffic app</a></button>",
-          "dataCustodian": "[Transport for NSW](https://www.transport.nsw.gov.au/)",
-          "metadataUrl": "https://opendata.transport.nsw.gov.au/node/342/exploreapi"
+          "name": "VIC Datasets",
+          "description": "<p style='color: red;'>For any emergency related decisions, users should call Triple Zero (000) and / or consult the State based applications and established alert communication channels. </p><p>These sources were used in the publication of data on NationalMap. Direct links to each data set source can be found in the “About this data” section. <ul><li><a href='https://emergency.vic.gov.au/respond/'>VIC Emergency app</a></li><li><a href='https://emergency.vic.gov.au/about-this-site/introduction'>VIC Emergency</a></li><li><a href='https://www.cfa.vic.gov.au/home'>VIC Country Fire Authority</a></li><li><a href='https://www.cfa.vic.gov.au/contact'>VIC Country Fire Authority contact</a></li></ul></p>",
+          "type": "group",
+          "preserveOrder": true,
+          "isOpen": false,
+          "items": [
+            {
+              "name": "Vic Emergency",
+              "type": "vic-emergency",
+              "description": "This data is retrieved from the VicEmergency website. <br /><p><strong>The data has been styled differently from the source application to be more consistent with other state datasets.</strong></p><p>Please refer to the VicEmergency website for a comprehensive map. </p><button class='nm-featureInfo-button'><a href='https://emergency.vic.gov.au/respond/'>VicEmergency app</a></button>",
+              "dataCustodian": "[VicEmergency](https://emergency.vic.gov.au/about-this-site/introduction)",
+              "dataUrl": "https://emergency.vic.gov.au/public/osom-geojson.json",
+              "dataUrlType": "direct"
+            },
+            {
+              "name": "Vic Burnt Areas",
+              "type": "geojson",
+              "url": "https://services6.arcgis.com/GB33F62SbDxJjwEL/arcgis/rest/services/Bushfire_Observations/FeatureServer/11/query?where=1%3D1&outFields=*&f=geojson",
+              "description": "<span style='color: red;'>Unknown</span>",
+              "dataUrl": "https://services6.arcgis.com/GB33F62SbDxJjwEL/arcgis/rest/services/Bushfire_Observations/FeatureServer/11",
+              "style": {
+                "fill": "#ff0000"
+              }
+            }
+          ]
         },
         {
-          "name": "Vic Emergency",
-          "type": "vic-emergency",
-          "description": "This data is retrieved from the VicEmergency website. <br /><p><strong>The data has been styled differently from the source application to be more consistent with other state datasets.</strong></p><p>Please refer to the VicEmergency website for a comprehensive map. </p><button class='nm-featureInfo-button'><a href='https://emergency.vic.gov.au/respond/'>VicEmergency app</a></button>",
-          "dataCustodian": "[VicEmergency](https://emergency.vic.gov.au/about-this-site/introduction)",
-          "dataUrl": "https://emergency.vic.gov.au/public/osom-geojson.json",
-          "dataUrlType": "direct"
-        },
-        {
-          "name": "SA Country Fire Service",
-          "type": "sa-cfs",
-          "description": "<p>This data is retrieved from the SA CFS website. For more information please refer to the SA CFS website for a comprehensive map. </p><button class='nm-featureInfo-button'><a href='https://www.cfs.sa.gov.au/site/home.jsp'>SA CFS app</a></button>",
-          "dataCustodian": "[South Australian Country Fire Service](https://www.cfs.sa.gov.au/site/home.jsp)",
-          "dataUrl": "https://s3-ap-southeast-2.amazonaws.com/data.eso.sa.gov.au/prod/cfs/criimson/cfs_current_incidents.json"
+          "name": "SA Datasets",
+          "description": "<p style='color: red;'>For any emergency related decisions, users should call Triple Zero (000) and / or consult the State based applications and established alert communication channels. </p><p>These sources were used in the publication of data on NationalMap. Direct links to each data set source can be found in the “About this data” section. <ul><li><a href='https://www.cfs.sa.gov.au/site/home.jsp'>South Australia Country Fire Service app</a></li><li><a href='https://www.cfs.sa.gov.au/site/about_cfs/contact_the_cfs.jsp'>South Australia Country Fire Service contact</a></li><li><a href='https://traffic.sa.gov.au/'>SA Traffic</a></li></ul></p>",
+          "type": "group",
+          "preserveOrder": true,
+          "isOpen": false,
+          "items": [
+            {
+              "name": "SA Country Fire Service",
+              "type": "sa-cfs",
+              "description": "<p>This data is retrieved from the SA CFS website. For more information please refer to the SA CFS website for a comprehensive map. </p><button class='nm-featureInfo-button'><a href='https://www.cfs.sa.gov.au/site/home.jsp'>SA CFS app</a></button>",
+              "dataCustodian": "[South Australian Country Fire Service](https://www.cfs.sa.gov.au/site/home.jsp)",
+              "dataUrl": "https://s3-ap-southeast-2.amazonaws.com/data.eso.sa.gov.au/prod/cfs/criimson/cfs_current_incidents.json"
+            },
+            {
+              "name": "SA Burnt Areas",
+              "type": "geojson",
+              "url": "https://services.geohub.sa.gov.au/v1CFSHA/featurelayer/server/rest/services/CFS_Incident_Read/SACFS_Area_Burnt/FeatureServer/0/query?where=1%3D1&outFields=*&f=geojson",
+              "description": "<p>This dataset provides Area Burnt polygons captured by the Mapping Functional Support Group (MFSG) to support the SACFS during major bushfire events. This dataset is captured as part of incident management activities to support control and recovery phases during bushfire emergencies. These data are generated by one of three capture methods during a major bushfire incident and converted to GIS polygons with attribution as part of SACFS &amp; MFSG workflows. It is important to note that updates to this dataset are in accordance with standard SACFS Intelligence gathering and MFSG processes.</p>",
+              "dataUrl": "https://services.geohub.sa.gov.au/v1CFSHA/featurelayer/server/rest/services/CFS_Incident_Read/SACFS_Area_Burnt/FeatureServer/0",
+              "style": {
+                "fill": "#ff0000"
+              }
+            },
+            {
+              "name": "Traffic SA",
+              "type": "esri-mapServer",
+              "url": "https://maps.sa.gov.au/arcgis/rest/services/DPTIExtTransport/TrafficSATime/MapServer/",
+              "description": "<p>This data is retrieved from the Traffic SA website. For more information please refer to the Traffic SA website for a comprehensive map. </p><p><button class='nm-featureInfo-button'><a href='https://traffic.sa.gov.au/'>Traffic SA app</a></button></p>",
+              "dataUrl": "https://maps.sa.gov.au/arcgis/rest/services/DPTIExtTransport/TrafficSATime/MapServer/0",
+              "dataCustodian": "[Traffic SA](https://traffic.sa.gov.au/)"
+            }
+          ]
         },
         {
           "name": "National Bushfire Boundaries",
@@ -44,119 +110,113 @@
           "useStyleInformationFromService": true
         },
         {
-           "name":"Weather",
-           "type": "group",
-           "preserveOrder": true,
-           "items" :[
-                {
-                  "id": "fa31eee8",
-                  "name": "Rainfall, month-to-date",
-                  "layers": "rain_day",
-                  "url":
-                    "http://www.bom.gov.au/jsp/awra/thredds/wms/AWRACMS/deciles/month/rain_day.nc",
-                  "type": "wms",
-                  "legendUrl": "data/legends/Precipitation.png",
-                  "ignoreUnknownTileErrors": true,
-                  "supportsColorScaleRange": false,
-                  "disableUserChanges": true,
-                  "parameters": {
-                    "styles": "boxfill/redbluedeciles",
-                    "colorscalerange": "0,1"
+          "name": "Weather",
+          "type": "group",
+          "preserveOrder": true,
+          "items": [
+            {
+              "id": "fa31eee8",
+              "name": "Rainfall, month-to-date",
+              "layers": "rain_day",
+              "url": "http://www.bom.gov.au/jsp/awra/thredds/wms/AWRACMS/deciles/month/rain_day.nc",
+              "type": "wms",
+              "legendUrl": "data/legends/Precipitation.png",
+              "ignoreUnknownTileErrors": true,
+              "supportsColorScaleRange": false,
+              "disableUserChanges": true,
+              "parameters": {
+                "styles": "boxfill/redbluedeciles",
+                "colorscalerange": "0,1"
+              },
+              "opacity": 0.75,
+              "description": "Daily precipitation grids are produced by the Bureau from approximately 6,500 rain gauge stations and interpolated to a 0.05 degree (approximately 5 x 5 km) national grid (Jones et al. 2009). Precipitation is an input into the AWRA-L model. The estimates are subject to approximations associated with interpolating observation point data to a national grid detailed in Jones et al. (2009). The precipitation input to the AWRA-L model are the near real time daily grids available at www.bom.gov.au/climate/maps. The monthly and annual precipitation is simply an aggregation of the near real time daily grids input to the AWRA-L model. Monthly grids that include additional rain gauge stations and rainfall observations (that are not available in near real time) can be found at www.bom.gov.au/climate/maps",
+              "featureInfoTemplate": {
+                "template": "In {{time}}, {{value}} of Australia had less rainfall than the clicked location.",
+                "name": "{{time}}: {{value}}",
+                "formats": {
+                  "value": {
+                    "style": "percent",
+                    "maximumFractionDigits": 0
                   },
-                  "opacity": 0.75,
-                  "description":
-                    "Daily precipitation grids are produced by the Bureau from approximately 6,500 rain gauge stations and interpolated to a 0.05 degree (approximately 5 x 5 km) national grid (Jones et al. 2009). Precipitation is an input into the AWRA-L model. The estimates are subject to approximations associated with interpolating observation point data to a national grid detailed in Jones et al. (2009). The precipitation input to the AWRA-L model are the near real time daily grids available at www.bom.gov.au/climate/maps. The monthly and annual precipitation is simply an aggregation of the near real time daily grids input to the AWRA-L model. Monthly grids that include additional rain gauge stations and rainfall observations (that are not available in near real time) can be found at www.bom.gov.au/climate/maps",
-                  "featureInfoTemplate": {
-                    "template":
-                      "In {{time}}, {{value}} of Australia had less rainfall than the clicked location.",
-                    "name": "{{time}}: {{value}}",
-                    "formats": {
-                      "value": {
-                        "style": "percent",
-                        "maximumFractionDigits": 0
-                      },
-                      "time": {
-                        "type": "dateTime",
-                        "format": "mmmm, yyyy"
-                      }
-                    }
-                  }
-                },
-                {
-                  "id": "81edea39",
-                  "name": "Root zone soil moisture, month-to-date",
-                  "layers": "sm_pct",
-                  "url":
-                    "http://www.bom.gov.au/jsp/awra/thredds/wms/AWRACMS/deciles/month/sm_pct.nc",
-                  "type": "wms",
-                  "legendUrl": "data/legends/Root_zone_soil_moisture.png",
-                  "ignoreUnknownTileErrors": true,
-                  "supportsColorScaleRange": false,
-                  "disableUserChanges": true,
-                  "parameters": {
-                    "styles": "boxfill/redbluedeciles",
-                    "colorscalerange": "0,1"
-                  },
-                  "opacity": 0.75,
-                  "description":
-                    "Root Zone Soil Moisture is the sum of water in the AWRA-L Upper and Lower soil layers and represents the percentage of available water content in the top 1 m of the soil profile. The maximum storage within the soil layer is calculated from the depth of the soil and the relative soil water storage capacity. The soil properties that control the storage of water are derived from the continental scale mapping within Australian Soil Resources Information System (Johnston et al., 2003). The relative available water capacity of the soil layer is derived from ASRIS information as the available water capacity of a layer divided by its thickness. Pedotransfer functions are used to relate soil hydraulic properties to soil textural class. Soil drainage and moisture dynamics are then based on water balance considerations for each soil layer. The shallow and deep rooted vegetation can both draw on this combined layer. <p> Actual soil moisture grids estimate the percentage of available water content rather than total soil water volume. Relative soil moisture grids, like the other grids, represent the long term deciles.</p>",
-                  "featureInfoTemplate": {
-                    "template":
-                      "In {{time}}, {{value}} of Australia had a lower root zone soil moisture than the clicked location.",
-                    "name": "{{time}}: {{value}}",
-                    "formats": {
-                      "value": {
-                        "style": "percent",
-                        "maximumFractionDigits": 0
-                      },
-                      "time": {
-                        "type": "dateTime",
-                        "format": "mmmm, yyyy"
-                      }
-                    }
+                  "time": {
+                    "type": "dateTime",
+                    "format": "mmmm, yyyy"
                   }
                 }
-           ]
+              }
+            },
+            {
+              "id": "81edea39",
+              "name": "Root zone soil moisture, month-to-date",
+              "layers": "sm_pct",
+              "url": "http://www.bom.gov.au/jsp/awra/thredds/wms/AWRACMS/deciles/month/sm_pct.nc",
+              "type": "wms",
+              "legendUrl": "data/legends/Root_zone_soil_moisture.png",
+              "ignoreUnknownTileErrors": true,
+              "supportsColorScaleRange": false,
+              "disableUserChanges": true,
+              "parameters": {
+                "styles": "boxfill/redbluedeciles",
+                "colorscalerange": "0,1"
+              },
+              "opacity": 0.75,
+              "description": "Root Zone Soil Moisture is the sum of water in the AWRA-L Upper and Lower soil layers and represents the percentage of available water content in the top 1 m of the soil profile. The maximum storage within the soil layer is calculated from the depth of the soil and the relative soil water storage capacity. The soil properties that control the storage of water are derived from the continental scale mapping within Australian Soil Resources Information System (Johnston et al., 2003). The relative available water capacity of the soil layer is derived from ASRIS information as the available water capacity of a layer divided by its thickness. Pedotransfer functions are used to relate soil hydraulic properties to soil textural class. Soil drainage and moisture dynamics are then based on water balance considerations for each soil layer. The shallow and deep rooted vegetation can both draw on this combined layer. <p> Actual soil moisture grids estimate the percentage of available water content rather than total soil water volume. Relative soil moisture grids, like the other grids, represent the long term deciles.</p>",
+              "featureInfoTemplate": {
+                "template": "In {{time}}, {{value}} of Australia had a lower root zone soil moisture than the clicked location.",
+                "name": "{{time}}: {{value}}",
+                "formats": {
+                  "value": {
+                    "style": "percent",
+                    "maximumFractionDigits": 0
+                  },
+                  "time": {
+                    "type": "dateTime",
+                    "format": "mmmm, yyyy"
+                  }
+                }
+              }
+            }
+          ]
         },
         {
-           "name":"Hotspots",
-           "type": "group",
-           "preserveOrder": true,
-           "items" :[
-              {
-                 "name": "Hotspots, Last 24h",
-                 "type": "wms",
-                 "url": "https://hotspots.dea.ga.gov.au/geoserver/ows",
-                 "layers": "public:hotspots_three_days",
-                 "ignoreUnknownTileErrors": true,
-                 "opacity": 1,
-                 "leafletUpdateInterval": 750,
-                 "legendUrls": [],
-                 "parameters": {
-                  "cql_filter": "hours_since_hotspot<=24"
-                }
-              },
-              {
-                 "name": "Hotspots, Last 72h",
-                 "type": "wms",
-                 "url": "https://hotspots.dea.ga.gov.au/geoserver/ows",
-                 "layers": "public:hotspots_three_days",
-                 "ignoreUnknownTileErrors": true,
-                 "opacity": 1,
-                 "leafletUpdateInterval": 750,
-                 "legendUrls": []
-              },
-              {
-                 "name": "Himawari-8 Mosaic, Last 10m",
-                 "type": "wms",
-                 "url": "https://hotspots.dea.ga.gov.au/geoserver/ows",
-                 "layers": "public:himawari8_mosaic",
-                 "ignoreUnknownTileErrors": true,
-                 "opacity": 1,
-                 "leafletUpdateInterval": 750,
-                 "legendUrls": []
+          "name": "Hotspots",
+          "type": "group",
+          "preserveOrder": true,
+          "items": [
+            {
+              "name": "Hotspots, Last 24 hours",
+              "type": "wms",
+              "url": "https://hotspots.dea.ga.gov.au/geoserver/ows",
+              "layers": "public:hotspots_three_days",
+              "ignoreUnknownTileErrors": true,
+              "opacity": 1,
+              "leafletUpdateInterval": 750,
+              "legendUrls": [],
+              "parameters": {
+                "cql_filter": "hours_since_hotspot<=24"
               }
-           ]
+            },
+            {
+              "name": "Hotspots, Last 72 hours",
+              "type": "wms",
+              "url": "https://hotspots.dea.ga.gov.au/geoserver/ows",
+              "layers": "public:hotspots_three_days",
+              "ignoreUnknownTileErrors": true,
+              "opacity": 1,
+              "leafletUpdateInterval": 750,
+              "legendUrls": []
+            },
+            {
+              "name": "Himawari-8 Mosaic, Last 10 minutes",
+              "type": "wms",
+              "url": "https://hotspots.dea.ga.gov.au/geoserver/ows",
+              "layers": "public:himawari8_mosaic",
+              "ignoreUnknownTileErrors": true,
+              "opacity": 1,
+              "leafletUpdateInterval": 750,
+              "legendUrls": []
+            }
+          ]
         }
       ]
     }
