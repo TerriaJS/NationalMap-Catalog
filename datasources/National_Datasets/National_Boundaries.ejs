@@ -50,7 +50,7 @@
               "dataUrlType": "direct",
               "dataUrl": "http://www.abs.gov.au/AUSSTATS/subscriber.nsf/log?openagent&1270055003_lga_2011_aust_shape.zip&1270.0.55.003&Data%20Cubes&4A320EE17A293459CA257937000CC967&0&July%202011&31.10.2011&Previous"
             },
-            <%- include('includes/censusdata2016', { name: 'Local Government Areas (2016)', layer: '8' }) %>,
+            <%- include('includes/censusdata', { name: 'Local Government Areas (2019)', layer: 'ASGS2019/LGA' }) %>,
             {
               "layers": "admin_bnds:POA_2011_AUST",
               "url": "http://geoserver.nationalmap.nicta.com.au/admin_bnds_abs/ows",
@@ -78,7 +78,7 @@
             },
             {
               "type": "esri-mapServer",
-              "url": "http://censusdata.abs.gov.au/arcgis/rest/services/ASGS2016/ASGS2016BoundariesOnline/MapServer/11",
+              "url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2016/POA/MapServer",
               "name": "Postal Areas (2016)",
               "opacity": 1,
               "keepOnTop": true,
