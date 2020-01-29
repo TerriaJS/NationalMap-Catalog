@@ -102,12 +102,1005 @@
           ]
         },
         {
-          "name": "National Bushfire Boundaries",
-          "type": "esri-featureServer",
-          "description": "This dataset contains an aggregated view of Australia's bushfire boundaries (burnt and burning areas - indicative only) as compiled by [Emergency Management Spatial Information Network Australia](https://www.emsina.org/).",
-          "url": "https://services9.arcgis.com/ZFlIzBMHgtgl0EYj/arcgis/rest/services/BushfireBoundaries/FeatureServer/0",
-          "dataCustodian": "[Emergency Management Spatial Information Network Australia](https://www.emsina.org/)",
-          "useStyleInformationFromService": true
+          "name": "National Burn Scar Information",
+          "description": "",
+          "type": "group",
+          "preserveOrder": true,
+          "isOpen": false,
+          "items": [
+            {
+              "name": "National Bushfire Boundaries",
+              "type": "esri-featureServer",
+              "description": "This dataset contains an aggregated view of Australia's bushfire boundaries (burnt and burning areas - indicative only) as compiled by [Emergency Management Spatial Information Network Australia](https://www.emsina.org/).",
+              "url": "https://services9.arcgis.com/ZFlIzBMHgtgl0EYj/arcgis/rest/services/BushfireBoundaries/FeatureServer/0",
+              "dataCustodian": "[Emergency Management Spatial Information Network Australia](https://www.emsina.org/)",
+              "useStyleInformationFromService": true
+            },
+            {
+              "name": "Hotspots",
+              "type": "group",
+              "preserveOrder": true,
+              "items": [
+                {
+                  "name": "Hotspots, Last 24 hours",
+                  "type": "wms",
+                  "url": "https://hotspots.dea.ga.gov.au/geoserver/ows",
+                  "layers": "public:hotspots_three_days",
+                  "ignoreUnknownTileErrors": true,
+                  "opacity": 1,
+                  "leafletUpdateInterval": 750,
+                  "legendUrls": [],
+                  "parameters": {
+                    "cql_filter": "hours_since_hotspot<=24"
+                  }
+                },
+                {
+                  "name": "Hotspots, Last 72 hours",
+                  "type": "wms",
+                  "url": "https://hotspots.dea.ga.gov.au/geoserver/ows",
+                  "layers": "public:hotspots_three_days",
+                  "ignoreUnknownTileErrors": true,
+                  "opacity": 1,
+                  "leafletUpdateInterval": 750,
+                  "legendUrls": []
+                },
+                {
+                  "name": "Himawari-8 Mosaic, Last 10 minutes",
+                  "type": "wms",
+                  "url": "https://hotspots.dea.ga.gov.au/geoserver/ows",
+                  "layers": "public:himawari8_mosaic",
+                  "ignoreUnknownTileErrors": true,
+                  "opacity": 1,
+                  "leafletUpdateInterval": 750,
+                  "legendUrls": []
+                }
+              ]
+            }            
+          ]
+        },
+        {
+          "name": "Regions",
+          "description": "",
+          "type": "group",
+          "preserveOrder": true,
+          "isOpen": false,
+          "items": [
+            {
+              "name": "Local Government Areas 2019",
+              "url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2019/LGA/MapServer",
+              "type": "esri-mapServer",
+              "opacity": 1.0,
+              "layers": "0"
+            },
+            {
+              "name": "Urban Centres and Localities 2016",
+              "url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2016/UCL/MapServer",
+              "type": "esri-mapServer",
+              "opacity": 1.0,
+              "layers": "0"
+            }          
+          ]
+        },
+        {
+          "name": "Social Infrastructure",
+          "description": "",
+          "type": "group",
+          "preserveOrder": true,
+          "isOpen": false,
+          "items": [
+            {
+              "id": "f2fdcea5",
+              "name": "Post Office Locations",
+              "url": "data/auspost-locations.csv",
+              "description": "",
+              "cacheDuration": "3m",
+              "type": "csv",
+              "tableStyle": {
+                "dataVariable": "State"
+              }
+            },
+            {
+              "id": "992b88d9",
+              "name": "General Practitioners (GPs)",
+              "url": "https://portals.agriculture.gov.au/Documents/Health_Services/General_Practitioners.csv",
+              "description": "A general practitioner (GP) is a doctor who is also qualified in general medical practice. GPs are often the first point of contact for someone, of any age, who feels sick or has a health concern. They treat a wide range of medical conditions and health issues.\n\nA GP may also undertake further education in specific areas such as mental health.\n\nThis data has been sourced from the National Health Services Directory. The data is self-authored location information only.\n\nFurther information can be found at: https://about.healthdirect.gov.au/national-health-services-directory",
+              "cacheDuration": "3m",
+              "type": "csv",
+              "tableStyle": {
+                "columns": {
+                  "Address": {
+                    "type": "HIDDEN"
+                  },
+                  "Appointment Required": {
+                    "type": "HIDDEN"
+                  },
+                  "Coverage Area: Locality": {
+                    "type": "HIDDEN"
+                  },
+                  "Coverage Area: Nationwide": {
+                    "type": "HIDDEN"
+                  },
+                  "Coverage Area: States": {
+                    "type": "HIDDEN"
+                  },
+                  "Coverage Area: Statewide": {
+                    "type": "HIDDEN"
+                  },
+                  "Email": {
+                    "type": "HIDDEN"
+                  },
+                  "Postcode": {
+                    "type": "HIDDEN"
+                  },
+                  "Secondary Services": {
+                    "type": "HIDDEN"
+                  },
+                  "Service Availability": {
+                    "type": "HIDDEN"
+                  },
+                  "Service Comment": {
+                    "type": "HIDDEN"
+                  },
+                  "Service Id": {
+                    "type": "HIDDEN"
+                  },
+                  "Service Phone": {
+                    "type": "HIDDEN"
+                  },
+                  "Site Facilities": {
+                    "type": "HIDDEN"
+                  },
+                  "Site Id": {
+                    "type": "HIDDEN"
+                  },
+                  "Site Name": {
+                    "type": "HIDDEN"
+                  },
+                  "Suburb": {
+                    "type": "HIDDEN"
+                  },
+                  "Web Site": {
+                    "type": "HIDDEN"
+                  }
+                }
+              }
+            },
+            {
+              "id": "ae40d907",
+              "name": "Headspace Centres",
+              "url": "https://portals.agriculture.gov.au/Documents/Health_Services/Headspace_Centres.csv",
+              "description": "Headspace centres offer anyone aged between 12 and 25 years a single entry point to friendly primary care that includes early intervention services and support for physical and mental wellbeing.  Headspace centres can be found at https://headspace.org.au/headspace-centres/",
+              "cacheDuration": "3m",
+              "type": "csv",
+              "tableStyle": {
+                "columns": {
+                  "Headspace Centre": {
+                    "colorBins": 1,
+                    "colorBinMethod": "cycle"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Service Centres",
+          "description": "",
+          "type": "group",
+          "preserveOrder": true,
+          "isOpen": false,
+          "items": [
+            {
+              "name": "Medicare Offices",
+              "type": "ckan-resource",
+              "url": "https://data.gov.au",
+              "datasetId": "location-of-medicare-offices",
+              "resourceId": "7eb30338-768e-436c-9dde-dc7a1066c9c9",
+              "csvResourceFormat": "CSV",
+              "itemProperties": {
+                "tableStyle": {
+                  "imageUrl": "images/square.png",
+                  "colorMap": [
+                    {
+                    "color": "rgba(255, 255, 64, 1.00)",
+                    "offset": 0
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Centrelink Offices",
+              "type": "ckan-resource",
+              "url": "https://data.gov.au",
+              "datasetId": "70c2b2fe-2a32-450e-98dc-453fe4a02aae",
+              "resourceId": "5a45d7b2-8579-425b-bb46-53a0e0bfa053",
+              "csvResourceFormat": "CSV",
+              "itemProperties": {
+                "tableStyle": {
+                  "imageUrl": "images/square.png",
+                  "colorMap": [
+                    {
+                    "color": "rgba(255, 255, 64, 1.00)",
+                    "offset": 0
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "id": "9b0c0ec0",
+              "name": "Centrelink Mobile Service Centre locations over time",
+              "url": "https://portals.agriculture.gov.au/Documents/Farm_Families_and_Individuals/Centrelink_Mobile_Service_Centre.csv",
+              "description": "Centrelink operates a Mobile Service Centre where staff are able to travel across rural and regional areas to help people with services and payments.\n\nMore information is available at https://www.humanservices.gov.au/individuals/services/centrelink/mobile-service-centres",
+              "cacheDuration": "3m",
+              "type": "csv",
+              "tableStyle": {
+                "format": {
+                  "useGrouping": true
+                },
+                "columns": {
+                  "Town": {
+                    "type": "HIDDEN"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Socio Economic",
+          "description": "",
+          "type": "group",
+          "preserveOrder": true,
+          "isOpen": false,
+          "items": [
+            {
+              "id": "540715da",
+              "name": "Population Density",
+              "layers": "NEXIS_PEOPLE_per_100m,NEXIS_PEOPLE_per_500m,NEXIS_PEOPLE_per_1000m,NEXIS_PEOPLE_per_5000m,NEXIS_PEOPLE_per_10000m",
+              "url": "http://services.ga.gov.au/gis/services/NEXIS_Residential_Population_Density/MapServer/WMSServer",
+              "type": "wms",
+              "info": [
+                {
+                  "name": "Data Description",
+                  "content": "This raster layer is a representation of the density of people across Australia derived from NEXIS residential building locations. It is calculated at 100 metre cell size."
+                }
+              ]
+            },
+            {
+              "id": "e0e53a0c",
+              "name": "Buildings",
+              "url": "http://services.ga.gov.au/gis/rest/services/AREMI_Buildings_WM/MapServer",
+              "type": "esri-mapServer",
+              "opacity": 1.0
+            },
+            {
+              "id": "228ECFCD-BB7C-47D0-B671-C37116FAA162",
+              "name": "DSS Payments by 2014 LGA Area",
+              "type": "ckan-resource",
+              "url": "https://data.gov.au",
+              "resourceId": "7c8c1ed7-9e62-4e18-bca5-6504b1483ce2",
+              "itemProperties": {
+                "tableStyle": {
+                  "regionVariable": "LGA",
+                  "regionType": "lga_code_2014"
+                }
+              }
+            },
+            {
+              "name": "Dwelling Type By Local Government Area (2016)",
+              "type": "sdmx-json",
+              "rectangle": [
+                109,
+                -45,
+                158,
+                -8
+              ],
+              "cacheDuration": "300s",
+              "sortValues": "id",
+              "showWarnings": false,
+              "cleanFootnotes": true,
+              "forceShowDimensionIds": [
+                "MEASURE"
+              ],
+              "url": "http://stat.data.abs.gov.au/sdmx-json/data/ABS_C16_T24_LGA",
+              "description": "You can view this data, along with explanations of the meaning of terms, on the ABS.Stat website [here](http://stat.data.abs.gov.au/Index.aspx?DatasetCode=ABS_C16_T24_LGA).  Click on the _i_ symbols on that page for further information and links. Please note that ABS.Stat beta is continuing to be developed. Data will be updated as soon as possible following its 11:30 am release on the ABS website.",
+              "aggregatedDimensionIds": [
+                "STATE"
+              ],
+              "totalValueIds": {
+                "*": [
+                  "TOT",
+                  "LFTOT"
+                ],
+                "SEX_ABS": [
+                  "3"
+                ],
+                "SPC": [
+                  "TT"
+                ],
+                "MTWP": [
+                  "1M",
+                  "2M",
+                  "3M"
+                ],
+                "FMCF": [
+                  "CF",
+                  "1",
+                  "2",
+                  "3"
+                ],
+                "POUR": [
+                  "TOT",
+                  "1",
+                  "2",
+                  "2_0",
+                  "2_11"
+                ],
+                "UAI1P": [
+                  "TOT",
+                  "2",
+                  "2_S",
+                  "2_D"
+                ],
+                "LFSP": [
+                  "TOT",
+                  "EMP",
+                  "UEMP"
+                ],
+                "FAMILY_TYPE": [
+                  "6"
+                ],
+                "HH_TYPE": [
+                  "4"
+                ],
+                "LEN": [
+                  "99"
+                ],
+                "INFANT_AGE": [
+                  "IMTOT"
+                ],
+                "DLC_11NC": [
+                  "210",
+                  "205"
+                ],
+                "DLC_11": [
+                  "T"
+                ],
+                "ANZIC": [
+                  "01",
+                  "TOTAL"
+                ],
+                "LU_11NC": [
+                  "210",
+                  "205"
+                ],
+                "LU_11": [
+                  "T"
+                ],
+                "LENDER": [
+                  "99"
+                ],
+                "INDUSTRY": [
+                  "-1",
+                  "T",
+                  "-"
+                ],
+                "SITC_REV3": [
+                  "-1",
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8",
+                  "9"
+                ],
+                "COUNTRY": [
+                  "-"
+                ],
+                "STRD_BEDRD": [
+                  "._TOT"
+                ],
+                "FMCF_INCC": [
+                  "TOT_TOT"
+                ],
+                "DEPOSIT_TYPE": [
+                  "6"
+                ],
+                "MINERAL_TYPE": [
+                  "11"
+                ],
+                "MLU_0611": [
+                  "9"
+                ],
+                "PLU_0611": [
+                  "10"
+                ],
+                "PLC_0611": [
+                  "10"
+                ],
+                "PERSON_LA": [
+                  "16"
+                ],
+                "LEASE_TYPE": [
+                  "3"
+                ],
+                "ASSET": [
+                  "999"
+                ],
+                "SECTOR": [
+                  "7",
+                  "9"
+                ],
+                "VEHICLE": [
+                  "900"
+                ],
+                "IND_R": [
+                  "20"
+                ],
+                "RELP": [
+                  "2"
+                ],
+                "ANCP": [
+                  "TOTP"
+                ],
+                "LANP": [
+                  "LOTE",
+                  "71",
+                  "52",
+                  "41",
+                  "65"
+                ],
+                "ENGLP": [
+                  "OTH",
+                  "SOL"
+                ],
+                "WORK": [
+                  "9"
+                ],
+                "TYPE_WORK": [
+                  "9"
+                ],
+                "BUILDING_TYPE": [
+                  "999",
+                  "100",
+                  "200",
+                  "300",
+                  "400",
+                  "700",
+                  "800"
+                ],
+                "TYPE_BLDG": [
+                  "999",
+                  "100",
+                  "200",
+                  "300",
+                  "400",
+                  "700",
+                  "800"
+                ],
+                "PLURALITY": [
+                  "SX_6"
+                ]
+              },
+              "whitelist": {
+                "REGIONTYPE": [
+                  "LGA2016"
+                ],
+                "FMCF": [
+                  "TOT",
+                  "[1-3]",
+                  "9"
+                ],
+                "STRD": [
+                  "TOT",
+                  "OPD",
+                  "[1-3]",
+                  "9",
+                  "11",
+                  "Z",
+                  "UPD"
+                ],
+                "LFSP": [
+                  "TOT",
+                  "EMP",
+                  "[1-4]",
+                  "7",
+                  "Z",
+                  "UEMP"
+                ],
+                "MTWP": [
+                  "TOT",
+                  "[1-3]M",
+                  "00[1-9]",
+                  "010",
+                  "011",
+                  "232",
+                  "TA",
+                  "BA",
+                  "B2",
+                  "233",
+                  "234",
+                  "Z"
+                ],
+                "TYPP": [
+                  "TOT",
+                  "10",
+                  "2",
+                  "3",
+                  "40",
+                  "50",
+                  "60",
+                  "Z",
+                  "V"
+                ],
+                "FMCF_INCC": [
+                  ".*_.*"
+                ],
+                "IND": [
+                  "-"
+                ],
+                "ANCP_2016": [
+                  "TOT",
+                  "[0-9]{4}"
+                ],
+                "BPLP_2016": [
+                  "TOT",
+                  "[0-9]{4}"
+                ],
+                "RELP_2016": [
+                  "TOT",
+                  "[0-9]{4}"
+                ],
+                "LANP_2016": [
+                  "TOT",
+                  "[0-9]{4}"
+                ],
+                "FMCF_2016": [
+                  "TOT",
+                  "[0-9]{4}"
+                ],
+                "HHCD_2016": [
+                  "TOT",
+                  "[0-9]{3}"
+                ],
+                "": [
+                  "A[0-9]+",
+                  "T.*",
+                  "O.*"
+                ],
+                "BUILDING_TYPE": [
+                  "999",
+                  "100",
+                  "110",
+                  "700",
+                  "800",
+                  "850"
+                ],
+                "TYPE_BLDG": [
+                  "999",
+                  "100",
+                  "110",
+                  "700",
+                  "800",
+                  "850"
+                ]
+              },
+              "regionDimensionId": "LGA_2016",
+              "selectedInitially": {
+                "REGIONTYPE": [
+                  "LGA2016"
+                ],
+                "COB": [
+                  "1101"
+                ],
+                "DT": [
+                  "2"
+                ],
+                "RESPONSE_CAT": [
+                  "RESPCLR_Y"
+                ],
+                "STATE": [
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8"
+                ],
+                "ASGS_2011": [
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8"
+                ]
+              }
+            },
+            {
+              "id": "80517fc4",
+              "name": "Industry of employment",
+              "url": "https://portals.agriculture.gov.au/Documents/Socio-Economic_Indicators/Industry_of_employment.csv",
+              "cacheDuration": "3m",
+              "type": "csv",
+              "description": "A person’s industry of employment relates to the activities undertaken by the business for which they work. Where a person works in more than one job, the industry classification relates to their main job – the one in which they usually work the most hours. Data is presented as the percentage of the population residing in the LGA employed by an industry.",
+              "info": [
+                {
+                "name": "Source",
+                "content": "Australian Bureau of Statistics – Regional Statistics by LGA 2017 http://stat.data.abs.gov.au/Index.aspx"
+                }
+              ],
+              "tableStyle": {
+                "format": {
+                  "useGrouping": true
+                },
+                "columns": {
+                  "LGA Name": {
+                    "type": "HIDDEN"
+                  }
+                }
+              }
+            },
+            {
+              "name": "Number of Businesses",
+              "type": "sdmx-json",
+              "id": "ABS_SDMX-JSON_CABEE_ABS_REGIONAL_ASGS",
+              "rectangle": [
+                109,
+                -45,
+                158,
+                -8
+              ],
+              "cacheDuration": "300s",
+              "regionNameTemplate": "{{name}}_code_2011",
+              "sortValues": "id",
+              "showWarnings": false,
+              "cleanFootnotes": true,
+              "forceShowDimensionIds": [
+                "MEASURE"
+              ],
+              "url": "http://stat.data.abs.gov.au/sdmx-json/data/ABS_REGIONAL_ASGS",
+              "description": "Explanatory notes are available [here](http://www.abs.gov.au/AUSSTATS/abs@.nsf/Lookup/1379.0.55.001Explanatory%20Notes12009-13?OpenDocument).<br/>You can view this data, along with explanations of the meaning of terms, on the ABS.Stat website [here](http://stat.data.abs.gov.au/Index.aspx?DatasetCode=ABS_REGIONAL_ASGS).  Click on the _i_ symbols on that page for further information and links. Please note that ABS.Stat beta is continuing to be developed. Data will be updated as soon as possible following its 11:30 am release on the ABS website.",
+              "singleValuedDimensionIds": [
+                "MEASURE"
+              ],
+              "totalValueIds": {
+                "*": [
+                  "TOT",
+                  "LFTOT"
+                ],
+                "SPC": [
+                  "TT"
+                ],
+                "MTWP": [
+                  "1M",
+                  "2M",
+                  "3M"
+                ],
+                "FMCF": [
+                  "CF",
+                  "1",
+                  "2",
+                  "3"
+                ],
+                "POUR": [
+                  "TOT",
+                  "1",
+                  "2",
+                  "2_0",
+                  "2_11"
+                ],
+                "UAI1P": [
+                  "TOT",
+                  "2",
+                  "2_S",
+                  "2_D"
+                ],
+                "LFSP": [
+                  "TOT",
+                  "EMP",
+                  "UEMP"
+                ],
+                "FAMILY_TYPE": [
+                  "6"
+                ],
+                "HH_TYPE": [
+                  "4"
+                ],
+                "LEN": [
+                  "99"
+                ],
+                "INFANT_AGE": [
+                  "IMTOT"
+                ],
+                "DLC_11NC": [
+                  "210",
+                  "205"
+                ],
+                "DLC_11": [
+                  "T"
+                ],
+                "ANZIC": [
+                  "01",
+                  "TOTAL"
+                ],
+                "LU_11NC": [
+                  "210",
+                  "205"
+                ],
+                "LU_11": [
+                  "T"
+                ],
+                "LENDER": [
+                  "99"
+                ],
+                "INDUSTRY": [
+                  "-1",
+                  "T",
+                  "-"
+                ],
+                "SITC_REV3": [
+                  "-1",
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8",
+                  "9"
+                ],
+                "COUNTRY": [
+                  "-"
+                ],
+                "STRD_BEDRD": [
+                  "._TOT"
+                ],
+                "FMCF_INCC": [
+                  "TOT_TOT"
+                ],
+                "DEPOSIT_TYPE": [
+                  "6"
+                ],
+                "MINERAL_TYPE": [
+                  "11"
+                ],
+                "MLU_0611": [
+                  "9"
+                ],
+                "PLU_0611": [
+                  "10"
+                ],
+                "PLC_0611": [
+                  "10"
+                ],
+                "PERSON_LA": [
+                  "16"
+                ],
+                "LEASE_TYPE": [
+                  "3"
+                ],
+                "ASSET": [
+                  "999"
+                ],
+                "SECTOR": [
+                  "7",
+                  "9"
+                ],
+                "VEHICLE": [
+                  "900"
+                ],
+                "IND_R": [
+                  "20"
+                ],
+                "RELP": [
+                  "2"
+                ],
+                "ANCP": [
+                  "TOTP"
+                ],
+                "LANP": [
+                  "LOTE",
+                  "71",
+                  "52",
+                  "41",
+                  "65"
+                ],
+                "ENGLP": [
+                  "OTH",
+                  "SOL"
+                ],
+                "WORK": [
+                  "9"
+                ],
+                "TYPE_WORK": [
+                  "9"
+                ],
+                "BUILDING_TYPE": [
+                  "999",
+                  "100",
+                  "200",
+                  "300",
+                  "400",
+                  "700",
+                  "800"
+                ],
+                "TYPE_BLDG": [
+                  "999",
+                  "100",
+                  "200",
+                  "300",
+                  "400",
+                  "700",
+                  "800"
+                ],
+                "PLURALITY": [
+                  "SX_6"
+                ]
+              },
+              "blacklist": {
+                "MEASURE": [
+                  "CABEE_1"
+                ]
+              },
+              "whitelist": {
+                "MEASURE": [
+                  "CABEE_.*"
+                ],
+                "FMCF": [
+                  "TOT",
+                  "[1-3]",
+                  "9"
+                ],
+                "STRD": [
+                  "TOT",
+                  "OPD",
+                  "[1-3]",
+                  "9",
+                  "11",
+                  "Z",
+                  "UPD"
+                ],
+                "LFSP": [
+                  "TOT",
+                  "EMP",
+                  "[1-4]",
+                  "7",
+                  "Z",
+                  "UEMP"
+                ],
+                "MTWP": [
+                  "TOT",
+                  "[1-3]M",
+                  "00[1-9]",
+                  "010",
+                  "011",
+                  "232",
+                  "TA",
+                  "BA",
+                  "B2",
+                  "233",
+                  "234",
+                  "Z"
+                ],
+                "TYPP": [
+                  "TOT",
+                  "10",
+                  "2",
+                  "3",
+                  "40",
+                  "50",
+                  "60",
+                  "Z",
+                  "V"
+                ],
+                "FMCF_INCC": [
+                  ".*_.*"
+                ],
+                "IND": [
+                  "-"
+                ],
+                "ANCP_2016": [
+                  "TOT",
+                  "[0-9]{4}"
+                ],
+                "BPLP_2016": [
+                  "TOT",
+                  "[0-9]{4}"
+                ],
+                "RELP_2016": [
+                  "TOT",
+                  "[0-9]{4}"
+                ],
+                "LANP_2016": [
+                  "TOT",
+                  "[0-9]{4}"
+                ],
+                "FMCF_2016": [
+                  "TOT",
+                  "[0-9]{4}"
+                ],
+                "HHCD_2016": [
+                  "TOT",
+                  "[0-9]{3}"
+                ],
+                "": [
+                  "A[0-9]+",
+                  "T.*",
+                  "O.*"
+                ],
+                "BUILDING_TYPE": [
+                  "999",
+                  "100",
+                  "110",
+                  "700",
+                  "800",
+                  "850"
+                ],
+                "TYPE_BLDG": [
+                  "999",
+                  "100",
+                  "110",
+                  "700",
+                  "800",
+                  "850"
+                ]
+              },
+              "selectedInitially": {
+                "REGIONTYPE": [
+                  "SA4"
+                ],
+                "COB": [
+                  "1101"
+                ],
+                "DT": [
+                  "2"
+                ],
+                "RESPONSE_CAT": [
+                  "RESPCLR_Y"
+                ],
+                "STATE": [
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8"
+                ],
+                "ASGS_2011": [
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8"
+                ]
+              }
+            },
+            {
+              "id": "367d6ecc",
+              "name": "Land Cover",
+              "url": "http://services.ga.gov.au/gis/rest/services/Land_Cover_WM/MapServer",
+              "type": "esri-mapServer",
+              "opacity": 1.0
+            }
+          ]
         },
         {
           "name": "Weather",
@@ -175,46 +1168,6 @@
                   }
                 }
               }
-            }
-          ]
-        },
-        {
-          "name": "Hotspots",
-          "type": "group",
-          "preserveOrder": true,
-          "items": [
-            {
-              "name": "Hotspots, Last 24 hours",
-              "type": "wms",
-              "url": "https://hotspots.dea.ga.gov.au/geoserver/ows",
-              "layers": "public:hotspots_three_days",
-              "ignoreUnknownTileErrors": true,
-              "opacity": 1,
-              "leafletUpdateInterval": 750,
-              "legendUrls": [],
-              "parameters": {
-                "cql_filter": "hours_since_hotspot<=24"
-              }
-            },
-            {
-              "name": "Hotspots, Last 72 hours",
-              "type": "wms",
-              "url": "https://hotspots.dea.ga.gov.au/geoserver/ows",
-              "layers": "public:hotspots_three_days",
-              "ignoreUnknownTileErrors": true,
-              "opacity": 1,
-              "leafletUpdateInterval": 750,
-              "legendUrls": []
-            },
-            {
-              "name": "Himawari-8 Mosaic, Last 10 minutes",
-              "type": "wms",
-              "url": "https://hotspots.dea.ga.gov.au/geoserver/ows",
-              "layers": "public:himawari8_mosaic",
-              "ignoreUnknownTileErrors": true,
-              "opacity": 1,
-              "leafletUpdateInterval": 750,
-              "legendUrls": []
             }
           ]
         }
