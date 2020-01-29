@@ -1,0 +1,1175 @@
+    {
+      "name": "Emergency Management Datasets",
+      "description": "<p>Emergency Management catalogue group on NationalMap aims to provide general public consolidated access to hazards related information. It does not replace the specific services provided through Emergency Services websites and apps nor the EMSINA Australian National Bushfire Boundaries website.</p> <p>The group includes data feeds sourced from:</p><ul><li>States and Territories Emergency public websites (details under each dataset) Emergency Management Location Information (EM-LINK) group: https://emlink.net.au/about </li><li>States live traffic platforms (where they exist)</li><li>Climate data from the Bureau</li> </ul><p>Users can overlay data specific to this group and any other datasets (infrastructure, environment, agriculture, demographic, satellite etc.) from the 11,000 NationalMap data catalogue.</p><p>The development and publication of the data is a collaborative effort between:</p><ul><li>Geoscience Australia</li><li>EM-LINK technical group made of representatives from States & Territories and the Commonwealth, owned by the Emergency Management Spatial Information Network Australia (EMSINA)</li><li>Esri Australia</li><li>Digital Transformation Agency</li> <li>CSIRO Data61 </li><li>Bureau of Meteorology</li></ul><p>Datasets for States and Territories will be added to the group as they become available. The data updates are done directly by the custodians.</p>",
+      "type": "group",
+      "preserveOrder": true,
+      "isOpen": false,
+      "items": [
+        {
+          "name": "NSW Datasets",
+          "description": "<p style=color: red;>For any emergency related decisions, users should call Triple Zero (000) and / or consult the State based applications and established alert communication channels. </p><p>These sources were used in the publication of data on NationalMap. Direct links to each data set source can be found in the “About this data” section. <ul><li><a href='https://www.rfs.nsw.gov.au/fire-information/fires-near-me'>NSW Rural Fire Service app - Fires Near Me</a></li><li><a href='https://www.rfs.nsw.gov.au/'>NSW Rural Fire Service website</a></li><li><a href='http://www.rfs.nsw.gov.au/news-and-media/stay-up-to-date/feeds'>NSW Rural Fire Service data feeds</a></li><li><a href='https://www.rfs.nsw.gov.au/about-us/contact-us'>NSW Rural Fire Service contact</a></li><li><a href='https://www.transport.nsw.gov.au/'>Transport for NSW</a></li><li><a href='https://www.livetraffic.com/desktop.html'>NSW Live Traffic</a></li></ul></p>",
+          "type": "group",
+          "preserveOrder": true,
+          "isOpen": false,
+          "items": [
+            {
+              "name": "NSW Rural Fire Service Major Incidents Feed",
+              "type": "nsw-rfs",
+              "description": "<p>This data is retrieved from the NSW RFS Fires Near Me website. Please refer to the RFS website for a comprehensive map.</p><p><button class='nm-featureInfo-button'><a href='https://www.rfs.nsw.gov.au/fire-information/fires-near-me'>Fires Near Me app</a></button></p>",
+              "dataCustodian": "[NSW Rural Fire Service](https://www.rfs.nsw.gov.au/)",
+              "dataUrl": "http://www.rfs.nsw.gov.au/feeds/majorIncidents.json",
+              "dataUrlType": "direct"
+            },
+            {
+              "name": "Live Traffic NSW",
+              "type": "nsw-live-traffic",
+              "description": "<p>This data is retrieved from the NSW Live Traffic website, it combines incidents and fire-related road information. For more information please refer to the Live Traffic NSW website for a comprehensive map.</p> <p><button class='nm-featureInfo-button'><a href='https://www.livetraffic.com/desktop.html'>NSW Live Traffic app</a></button></p>",
+              "dataCustodian": "[Transport for NSW](https://www.transport.nsw.gov.au/)",
+              "metadataUrl": "https://opendata.transport.nsw.gov.au/node/342/exploreapi"
+            },
+            {
+              "name": "NSW Bushfire Burnt Areas - Since 1 July 2019",
+              "type": "geojson",
+              "url": "https://services9.arcgis.com/ZFlIzBMHgtgl0EYj/arcgis/rest/services/NSW_Bushfire_Burnt_Areas_2019_and_2020/FeatureServer/0/query?where=1%3D1&outFields=*&f=geojson",
+              "description": "<p>This spatial webservice is a merge of wildfires across NSW since 1 July 2019.</p> <p>The fires have been exported from ICON periodically to capture all wildfires for the season. ICON - https://icon.rfs.nsw.gov.au/-is the centralised RFS website where all fire incident spatial data, information and products are uploaded. From there the data is used to populate the Fires Near Me app.</p><p>The layer originally contains many overlapping polygons so they have been dissolved and merged. As a result individual fire names and numbers have been lost.</p><p>Please note that the fire polygons in ICON capture the outer perimeter of the fire and therefore show worst case scenario. Internal unburnt areas are mostly not captured while the fire is still going.</p><p>The VerDate field in the attribute table contains the date that the fires were captured to - currently 10 January 2020</p>",
+              "dataCustodian": "[EMSINA](https://www.emsina.org/)",
+              "metadataUrl": "https://bushfires-esriau.hub.arcgis.com/datasets/6f5565fc533249fd87fd294410438829_0",
+              "style": {
+                "fill": "#ff0000"
+              }
+            }
+          ]
+        },
+        {
+          "name": "VIC Datasets",
+          "description": "<p style='color: red;'>For any emergency related decisions, users should call Triple Zero (000) and / or consult the State based applications and established alert communication channels. </p><p>These sources were used in the publication of data on NationalMap. Direct links to each data set source can be found in the “About this data” section. <ul><li><a href='https://emergency.vic.gov.au/respond/'>VIC Emergency app</a></li><li><a href='https://emergency.vic.gov.au/about-this-site/introduction'>VIC Emergency</a></li><li><a href='https://www.cfa.vic.gov.au/home'>VIC Country Fire Authority</a></li><li><a href='https://www.cfa.vic.gov.au/contact'>VIC Country Fire Authority contact</a></li></ul></p>",
+          "type": "group",
+          "preserveOrder": true,
+          "isOpen": false,
+          "items": [
+            {
+              "name": "Vic Emergency",
+              "type": "vic-emergency",
+              "description": "This data is retrieved from the VicEmergency website. <br /><p><strong>The data has been styled differently from the source application to be more consistent with other state datasets.</strong></p><p>Please refer to the VicEmergency website for a comprehensive map. </p><button class='nm-featureInfo-button'><a href='https://emergency.vic.gov.au/respond/'>VicEmergency app</a></button>",
+              "dataCustodian": "[VicEmergency](https://emergency.vic.gov.au/about-this-site/introduction)",
+              "dataUrl": "https://emergency.vic.gov.au/public/osom-geojson.json",
+              "dataUrlType": "direct"
+            },
+            {
+              "name": "Vic Burnt Areas",
+              "type": "geojson",
+              "url": "https://services6.arcgis.com/GB33F62SbDxJjwEL/arcgis/rest/services/Bushfire_Observations/FeatureServer/11/query?where=1%3D1&outFields=*&f=geojson",
+              "description": "<span style='color: red;'>Unknown</span>",
+              "dataUrl": "https://services6.arcgis.com/GB33F62SbDxJjwEL/arcgis/rest/services/Bushfire_Observations/FeatureServer/11",
+              "style": {
+                "fill": "#ff0000"
+              }
+            }
+          ]
+        },
+        {
+          "name": "SA Datasets",
+          "description": "<p style='color: red;'>For any emergency related decisions, users should call Triple Zero (000) and / or consult the State based applications and established alert communication channels. </p><p>These sources were used in the publication of data on NationalMap. Direct links to each data set source can be found in the “About this data” section. <ul><li><a href='https://www.cfs.sa.gov.au/site/home.jsp'>South Australia Country Fire Service app</a></li><li><a href='https://www.cfs.sa.gov.au/site/about_cfs/contact_the_cfs.jsp'>South Australia Country Fire Service contact</a></li><li><a href='https://traffic.sa.gov.au/'>SA Traffic</a></li></ul></p>",
+          "type": "group",
+          "preserveOrder": true,
+          "isOpen": false,
+          "items": [
+            {
+              "name": "SA Country Fire Service",
+              "type": "sa-cfs",
+              "description": "<p>This data is retrieved from the SA CFS website. For more information please refer to the SA CFS website for a comprehensive map. </p><button class='nm-featureInfo-button'><a href='https://www.cfs.sa.gov.au/site/home.jsp'>SA CFS app</a></button>",
+              "dataCustodian": "[South Australian Country Fire Service](https://www.cfs.sa.gov.au/site/home.jsp)",
+              "dataUrl": "https://s3-ap-southeast-2.amazonaws.com/data.eso.sa.gov.au/prod/cfs/criimson/cfs_current_incidents.json"
+            },
+            {
+              "name": "SA Burnt Areas",
+              "type": "geojson",
+              "url": "https://services.geohub.sa.gov.au/v1CFSHA/featurelayer/server/rest/services/CFS_Incident_Read/SACFS_Area_Burnt/FeatureServer/0/query?where=1%3D1&outFields=*&f=geojson",
+              "description": "<p>This dataset provides Area Burnt polygons captured by the Mapping Functional Support Group (MFSG) to support the SACFS during major bushfire events. This dataset is captured as part of incident management activities to support control and recovery phases during bushfire emergencies. These data are generated by one of three capture methods during a major bushfire incident and converted to GIS polygons with attribution as part of SACFS &amp; MFSG workflows. It is important to note that updates to this dataset are in accordance with standard SACFS Intelligence gathering and MFSG processes.</p>",
+              "dataUrl": "https://services.geohub.sa.gov.au/v1CFSHA/featurelayer/server/rest/services/CFS_Incident_Read/SACFS_Area_Burnt/FeatureServer/0",
+              "style": {
+                "fill": "#ff0000"
+              }
+            },
+            {
+              "name": "Traffic SA",
+              "type": "esri-mapServer",
+              "url": "https://maps.sa.gov.au/arcgis/rest/services/DPTIExtTransport/TrafficSATime/MapServer/",
+              "description": "<p>This data is retrieved from the Traffic SA website. For more information please refer to the Traffic SA website for a comprehensive map. </p><p><button class='nm-featureInfo-button'><a href='https://traffic.sa.gov.au/'>Traffic SA app</a></button></p>",
+              "dataUrl": "https://maps.sa.gov.au/arcgis/rest/services/DPTIExtTransport/TrafficSATime/MapServer/0",
+              "dataCustodian": "[Traffic SA](https://traffic.sa.gov.au/)"
+            }
+          ]
+        },
+        {
+          "name": "National Burn Scar Information",
+          "description": "",
+          "type": "group",
+          "preserveOrder": true,
+          "isOpen": false,
+          "items": [
+            {
+              "name": "National Bushfire Boundaries",
+              "type": "esri-featureServer",
+              "description": "This dataset contains an aggregated view of Australia's bushfire boundaries (burnt and burning areas - indicative only) as compiled by [Emergency Management Spatial Information Network Australia](https://www.emsina.org/).",
+              "url": "https://services9.arcgis.com/ZFlIzBMHgtgl0EYj/arcgis/rest/services/BushfireBoundaries/FeatureServer/0",
+              "dataCustodian": "[Emergency Management Spatial Information Network Australia](https://www.emsina.org/)",
+              "useStyleInformationFromService": true
+            },
+            {
+              "name": "Hotspots",
+              "type": "group",
+              "preserveOrder": true,
+              "items": [
+                {
+                  "name": "Hotspots, Last 24 hours",
+                  "type": "wms",
+                  "url": "https://hotspots.dea.ga.gov.au/geoserver/ows",
+                  "layers": "public:hotspots_three_days",
+                  "ignoreUnknownTileErrors": true,
+                  "opacity": 1,
+                  "leafletUpdateInterval": 750,
+                  "legendUrls": [],
+                  "parameters": {
+                    "cql_filter": "hours_since_hotspot<=24"
+                  }
+                },
+                {
+                  "name": "Hotspots, Last 72 hours",
+                  "type": "wms",
+                  "url": "https://hotspots.dea.ga.gov.au/geoserver/ows",
+                  "layers": "public:hotspots_three_days",
+                  "ignoreUnknownTileErrors": true,
+                  "opacity": 1,
+                  "leafletUpdateInterval": 750,
+                  "legendUrls": []
+                },
+                {
+                  "name": "Himawari-8 Mosaic, Last 10 minutes",
+                  "type": "wms",
+                  "url": "https://hotspots.dea.ga.gov.au/geoserver/ows",
+                  "layers": "public:himawari8_mosaic",
+                  "ignoreUnknownTileErrors": true,
+                  "opacity": 1,
+                  "leafletUpdateInterval": 750,
+                  "legendUrls": []
+                }
+              ]
+            }            
+          ]
+        },
+        {
+          "name": "Regions",
+          "description": "",
+          "type": "group",
+          "preserveOrder": true,
+          "isOpen": false,
+          "items": [
+            {
+              "name": "Local Government Areas 2019",
+              "url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2019/LGA/MapServer",
+              "type": "esri-mapServer",
+              "opacity": 1.0,
+              "layers": "0"
+            },
+            {
+              "name": "Urban Centres and Localities 2016",
+              "url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2016/UCL/MapServer",
+              "type": "esri-mapServer",
+              "opacity": 1.0,
+              "layers": "0"
+            }          
+          ]
+        },
+        {
+          "name": "Social Infrastructure",
+          "description": "",
+          "type": "group",
+          "preserveOrder": true,
+          "isOpen": false,
+          "items": [
+            {
+              "id": "f2fdcea5",
+              "name": "Post Office Locations",
+              "url": "data/auspost-locations.csv",
+              "description": "",
+              "cacheDuration": "3m",
+              "type": "csv",
+              "tableStyle": {
+                "dataVariable": "State"
+              }
+            },
+            {
+              "id": "992b88d9",
+              "name": "General Practitioners (GPs)",
+              "url": "https://portals.agriculture.gov.au/Documents/Health_Services/General_Practitioners.csv",
+              "description": "A general practitioner (GP) is a doctor who is also qualified in general medical practice. GPs are often the first point of contact for someone, of any age, who feels sick or has a health concern. They treat a wide range of medical conditions and health issues.\n\nA GP may also undertake further education in specific areas such as mental health.\n\nThis data has been sourced from the National Health Services Directory. The data is self-authored location information only.\n\nFurther information can be found at: https://about.healthdirect.gov.au/national-health-services-directory",
+              "cacheDuration": "3m",
+              "type": "csv",
+              "tableStyle": {
+                "columns": {
+                  "Address": {
+                    "type": "HIDDEN"
+                  },
+                  "Appointment Required": {
+                    "type": "HIDDEN"
+                  },
+                  "Coverage Area: Locality": {
+                    "type": "HIDDEN"
+                  },
+                  "Coverage Area: Nationwide": {
+                    "type": "HIDDEN"
+                  },
+                  "Coverage Area: States": {
+                    "type": "HIDDEN"
+                  },
+                  "Coverage Area: Statewide": {
+                    "type": "HIDDEN"
+                  },
+                  "Email": {
+                    "type": "HIDDEN"
+                  },
+                  "Postcode": {
+                    "type": "HIDDEN"
+                  },
+                  "Secondary Services": {
+                    "type": "HIDDEN"
+                  },
+                  "Service Availability": {
+                    "type": "HIDDEN"
+                  },
+                  "Service Comment": {
+                    "type": "HIDDEN"
+                  },
+                  "Service Id": {
+                    "type": "HIDDEN"
+                  },
+                  "Service Phone": {
+                    "type": "HIDDEN"
+                  },
+                  "Site Facilities": {
+                    "type": "HIDDEN"
+                  },
+                  "Site Id": {
+                    "type": "HIDDEN"
+                  },
+                  "Site Name": {
+                    "type": "HIDDEN"
+                  },
+                  "Suburb": {
+                    "type": "HIDDEN"
+                  },
+                  "Web Site": {
+                    "type": "HIDDEN"
+                  }
+                }
+              }
+            },
+            {
+              "id": "ae40d907",
+              "name": "Headspace Centres",
+              "url": "https://portals.agriculture.gov.au/Documents/Health_Services/Headspace_Centres.csv",
+              "description": "Headspace centres offer anyone aged between 12 and 25 years a single entry point to friendly primary care that includes early intervention services and support for physical and mental wellbeing.  Headspace centres can be found at https://headspace.org.au/headspace-centres/",
+              "cacheDuration": "3m",
+              "type": "csv",
+              "tableStyle": {
+                "columns": {
+                  "Headspace Centre": {
+                    "colorBins": 1,
+                    "colorBinMethod": "cycle"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Service Centres",
+          "description": "",
+          "type": "group",
+          "preserveOrder": true,
+          "isOpen": false,
+          "items": [
+            {
+              "name": "Medicare Offices",
+              "type": "ckan-resource",
+              "url": "https://data.gov.au",
+              "datasetId": "location-of-medicare-offices",
+              "resourceId": "7eb30338-768e-436c-9dde-dc7a1066c9c9",
+              "csvResourceFormat": "CSV",
+              "itemProperties": {
+                "tableStyle": {
+                  "imageUrl": "images/square.png",
+                  "colorMap": [
+                    {
+                    "color": "rgba(255, 255, 64, 1.00)",
+                    "offset": 0
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Centrelink Offices",
+              "type": "ckan-resource",
+              "url": "https://data.gov.au",
+              "datasetId": "70c2b2fe-2a32-450e-98dc-453fe4a02aae",
+              "resourceId": "5a45d7b2-8579-425b-bb46-53a0e0bfa053",
+              "csvResourceFormat": "CSV",
+              "itemProperties": {
+                "tableStyle": {
+                  "imageUrl": "images/square.png",
+                  "colorMap": [
+                    {
+                    "color": "rgba(255, 255, 64, 1.00)",
+                    "offset": 0
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "id": "9b0c0ec0",
+              "name": "Centrelink Mobile Service Centre locations over time",
+              "url": "https://portals.agriculture.gov.au/Documents/Farm_Families_and_Individuals/Centrelink_Mobile_Service_Centre.csv",
+              "description": "Centrelink operates a Mobile Service Centre where staff are able to travel across rural and regional areas to help people with services and payments.\n\nMore information is available at https://www.humanservices.gov.au/individuals/services/centrelink/mobile-service-centres",
+              "cacheDuration": "3m",
+              "type": "csv",
+              "tableStyle": {
+                "format": {
+                  "useGrouping": true
+                },
+                "columns": {
+                  "Town": {
+                    "type": "HIDDEN"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Socio Economic",
+          "description": "",
+          "type": "group",
+          "preserveOrder": true,
+          "isOpen": false,
+          "items": [
+            {
+              "id": "540715da",
+              "name": "Population Density",
+              "layers": "NEXIS_PEOPLE_per_100m,NEXIS_PEOPLE_per_500m,NEXIS_PEOPLE_per_1000m,NEXIS_PEOPLE_per_5000m,NEXIS_PEOPLE_per_10000m",
+              "url": "http://services.ga.gov.au/gis/services/NEXIS_Residential_Population_Density/MapServer/WMSServer",
+              "type": "wms",
+              "info": [
+                {
+                  "name": "Data Description",
+                  "content": "This raster layer is a representation of the density of people across Australia derived from NEXIS residential building locations. It is calculated at 100 metre cell size."
+                }
+              ]
+            },
+            {
+              "id": "e0e53a0c",
+              "name": "Buildings",
+              "url": "http://services.ga.gov.au/gis/rest/services/AREMI_Buildings_WM/MapServer",
+              "type": "esri-mapServer",
+              "opacity": 1.0
+            },
+            {
+              "id": "228ECFCD-BB7C-47D0-B671-C37116FAA162",
+              "name": "DSS Payments by 2014 LGA Area",
+              "type": "ckan-resource",
+              "url": "https://data.gov.au",
+              "resourceId": "7c8c1ed7-9e62-4e18-bca5-6504b1483ce2",
+              "itemProperties": {
+                "tableStyle": {
+                  "regionVariable": "LGA",
+                  "regionType": "lga_code_2014"
+                }
+              }
+            },
+            {
+              "name": "Dwelling Type By Local Government Area (2016)",
+              "type": "sdmx-json",
+              "rectangle": [
+                109,
+                -45,
+                158,
+                -8
+              ],
+              "cacheDuration": "300s",
+              "sortValues": "id",
+              "showWarnings": false,
+              "cleanFootnotes": true,
+              "forceShowDimensionIds": [
+                "MEASURE"
+              ],
+              "url": "http://stat.data.abs.gov.au/sdmx-json/data/ABS_C16_T24_LGA",
+              "description": "You can view this data, along with explanations of the meaning of terms, on the ABS.Stat website [here](http://stat.data.abs.gov.au/Index.aspx?DatasetCode=ABS_C16_T24_LGA).  Click on the _i_ symbols on that page for further information and links. Please note that ABS.Stat beta is continuing to be developed. Data will be updated as soon as possible following its 11:30 am release on the ABS website.",
+              "aggregatedDimensionIds": [
+                "STATE"
+              ],
+              "totalValueIds": {
+                "*": [
+                  "TOT",
+                  "LFTOT"
+                ],
+                "SEX_ABS": [
+                  "3"
+                ],
+                "SPC": [
+                  "TT"
+                ],
+                "MTWP": [
+                  "1M",
+                  "2M",
+                  "3M"
+                ],
+                "FMCF": [
+                  "CF",
+                  "1",
+                  "2",
+                  "3"
+                ],
+                "POUR": [
+                  "TOT",
+                  "1",
+                  "2",
+                  "2_0",
+                  "2_11"
+                ],
+                "UAI1P": [
+                  "TOT",
+                  "2",
+                  "2_S",
+                  "2_D"
+                ],
+                "LFSP": [
+                  "TOT",
+                  "EMP",
+                  "UEMP"
+                ],
+                "FAMILY_TYPE": [
+                  "6"
+                ],
+                "HH_TYPE": [
+                  "4"
+                ],
+                "LEN": [
+                  "99"
+                ],
+                "INFANT_AGE": [
+                  "IMTOT"
+                ],
+                "DLC_11NC": [
+                  "210",
+                  "205"
+                ],
+                "DLC_11": [
+                  "T"
+                ],
+                "ANZIC": [
+                  "01",
+                  "TOTAL"
+                ],
+                "LU_11NC": [
+                  "210",
+                  "205"
+                ],
+                "LU_11": [
+                  "T"
+                ],
+                "LENDER": [
+                  "99"
+                ],
+                "INDUSTRY": [
+                  "-1",
+                  "T",
+                  "-"
+                ],
+                "SITC_REV3": [
+                  "-1",
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8",
+                  "9"
+                ],
+                "COUNTRY": [
+                  "-"
+                ],
+                "STRD_BEDRD": [
+                  "._TOT"
+                ],
+                "FMCF_INCC": [
+                  "TOT_TOT"
+                ],
+                "DEPOSIT_TYPE": [
+                  "6"
+                ],
+                "MINERAL_TYPE": [
+                  "11"
+                ],
+                "MLU_0611": [
+                  "9"
+                ],
+                "PLU_0611": [
+                  "10"
+                ],
+                "PLC_0611": [
+                  "10"
+                ],
+                "PERSON_LA": [
+                  "16"
+                ],
+                "LEASE_TYPE": [
+                  "3"
+                ],
+                "ASSET": [
+                  "999"
+                ],
+                "SECTOR": [
+                  "7",
+                  "9"
+                ],
+                "VEHICLE": [
+                  "900"
+                ],
+                "IND_R": [
+                  "20"
+                ],
+                "RELP": [
+                  "2"
+                ],
+                "ANCP": [
+                  "TOTP"
+                ],
+                "LANP": [
+                  "LOTE",
+                  "71",
+                  "52",
+                  "41",
+                  "65"
+                ],
+                "ENGLP": [
+                  "OTH",
+                  "SOL"
+                ],
+                "WORK": [
+                  "9"
+                ],
+                "TYPE_WORK": [
+                  "9"
+                ],
+                "BUILDING_TYPE": [
+                  "999",
+                  "100",
+                  "200",
+                  "300",
+                  "400",
+                  "700",
+                  "800"
+                ],
+                "TYPE_BLDG": [
+                  "999",
+                  "100",
+                  "200",
+                  "300",
+                  "400",
+                  "700",
+                  "800"
+                ],
+                "PLURALITY": [
+                  "SX_6"
+                ]
+              },
+              "whitelist": {
+                "REGIONTYPE": [
+                  "LGA2016"
+                ],
+                "FMCF": [
+                  "TOT",
+                  "[1-3]",
+                  "9"
+                ],
+                "STRD": [
+                  "TOT",
+                  "OPD",
+                  "[1-3]",
+                  "9",
+                  "11",
+                  "Z",
+                  "UPD"
+                ],
+                "LFSP": [
+                  "TOT",
+                  "EMP",
+                  "[1-4]",
+                  "7",
+                  "Z",
+                  "UEMP"
+                ],
+                "MTWP": [
+                  "TOT",
+                  "[1-3]M",
+                  "00[1-9]",
+                  "010",
+                  "011",
+                  "232",
+                  "TA",
+                  "BA",
+                  "B2",
+                  "233",
+                  "234",
+                  "Z"
+                ],
+                "TYPP": [
+                  "TOT",
+                  "10",
+                  "2",
+                  "3",
+                  "40",
+                  "50",
+                  "60",
+                  "Z",
+                  "V"
+                ],
+                "FMCF_INCC": [
+                  ".*_.*"
+                ],
+                "IND": [
+                  "-"
+                ],
+                "ANCP_2016": [
+                  "TOT",
+                  "[0-9]{4}"
+                ],
+                "BPLP_2016": [
+                  "TOT",
+                  "[0-9]{4}"
+                ],
+                "RELP_2016": [
+                  "TOT",
+                  "[0-9]{4}"
+                ],
+                "LANP_2016": [
+                  "TOT",
+                  "[0-9]{4}"
+                ],
+                "FMCF_2016": [
+                  "TOT",
+                  "[0-9]{4}"
+                ],
+                "HHCD_2016": [
+                  "TOT",
+                  "[0-9]{3}"
+                ],
+                "": [
+                  "A[0-9]+",
+                  "T.*",
+                  "O.*"
+                ],
+                "BUILDING_TYPE": [
+                  "999",
+                  "100",
+                  "110",
+                  "700",
+                  "800",
+                  "850"
+                ],
+                "TYPE_BLDG": [
+                  "999",
+                  "100",
+                  "110",
+                  "700",
+                  "800",
+                  "850"
+                ]
+              },
+              "regionDimensionId": "LGA_2016",
+              "selectedInitially": {
+                "REGIONTYPE": [
+                  "LGA2016"
+                ],
+                "COB": [
+                  "1101"
+                ],
+                "DT": [
+                  "2"
+                ],
+                "RESPONSE_CAT": [
+                  "RESPCLR_Y"
+                ],
+                "STATE": [
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8"
+                ],
+                "ASGS_2011": [
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8"
+                ]
+              }
+            },
+            {
+              "id": "80517fc4",
+              "name": "Industry of employment",
+              "url": "https://portals.agriculture.gov.au/Documents/Socio-Economic_Indicators/Industry_of_employment.csv",
+              "cacheDuration": "3m",
+              "type": "csv",
+              "description": "A person’s industry of employment relates to the activities undertaken by the business for which they work. Where a person works in more than one job, the industry classification relates to their main job – the one in which they usually work the most hours. Data is presented as the percentage of the population residing in the LGA employed by an industry.",
+              "info": [
+                {
+                "name": "Source",
+                "content": "Australian Bureau of Statistics – Regional Statistics by LGA 2017 http://stat.data.abs.gov.au/Index.aspx"
+                }
+              ],
+              "tableStyle": {
+                "format": {
+                  "useGrouping": true
+                },
+                "columns": {
+                  "LGA Name": {
+                    "type": "HIDDEN"
+                  }
+                }
+              }
+            },
+            {
+              "name": "Number of Businesses",
+              "type": "sdmx-json",
+              "id": "ABS_SDMX-JSON_CABEE_ABS_REGIONAL_ASGS",
+              "rectangle": [
+                109,
+                -45,
+                158,
+                -8
+              ],
+              "cacheDuration": "300s",
+              "regionNameTemplate": "{{name}}_code_2011",
+              "sortValues": "id",
+              "showWarnings": false,
+              "cleanFootnotes": true,
+              "forceShowDimensionIds": [
+                "MEASURE"
+              ],
+              "url": "http://stat.data.abs.gov.au/sdmx-json/data/ABS_REGIONAL_ASGS",
+              "description": "Explanatory notes are available [here](http://www.abs.gov.au/AUSSTATS/abs@.nsf/Lookup/1379.0.55.001Explanatory%20Notes12009-13?OpenDocument).<br/>You can view this data, along with explanations of the meaning of terms, on the ABS.Stat website [here](http://stat.data.abs.gov.au/Index.aspx?DatasetCode=ABS_REGIONAL_ASGS).  Click on the _i_ symbols on that page for further information and links. Please note that ABS.Stat beta is continuing to be developed. Data will be updated as soon as possible following its 11:30 am release on the ABS website.",
+              "singleValuedDimensionIds": [
+                "MEASURE"
+              ],
+              "totalValueIds": {
+                "*": [
+                  "TOT",
+                  "LFTOT"
+                ],
+                "SPC": [
+                  "TT"
+                ],
+                "MTWP": [
+                  "1M",
+                  "2M",
+                  "3M"
+                ],
+                "FMCF": [
+                  "CF",
+                  "1",
+                  "2",
+                  "3"
+                ],
+                "POUR": [
+                  "TOT",
+                  "1",
+                  "2",
+                  "2_0",
+                  "2_11"
+                ],
+                "UAI1P": [
+                  "TOT",
+                  "2",
+                  "2_S",
+                  "2_D"
+                ],
+                "LFSP": [
+                  "TOT",
+                  "EMP",
+                  "UEMP"
+                ],
+                "FAMILY_TYPE": [
+                  "6"
+                ],
+                "HH_TYPE": [
+                  "4"
+                ],
+                "LEN": [
+                  "99"
+                ],
+                "INFANT_AGE": [
+                  "IMTOT"
+                ],
+                "DLC_11NC": [
+                  "210",
+                  "205"
+                ],
+                "DLC_11": [
+                  "T"
+                ],
+                "ANZIC": [
+                  "01",
+                  "TOTAL"
+                ],
+                "LU_11NC": [
+                  "210",
+                  "205"
+                ],
+                "LU_11": [
+                  "T"
+                ],
+                "LENDER": [
+                  "99"
+                ],
+                "INDUSTRY": [
+                  "-1",
+                  "T",
+                  "-"
+                ],
+                "SITC_REV3": [
+                  "-1",
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8",
+                  "9"
+                ],
+                "COUNTRY": [
+                  "-"
+                ],
+                "STRD_BEDRD": [
+                  "._TOT"
+                ],
+                "FMCF_INCC": [
+                  "TOT_TOT"
+                ],
+                "DEPOSIT_TYPE": [
+                  "6"
+                ],
+                "MINERAL_TYPE": [
+                  "11"
+                ],
+                "MLU_0611": [
+                  "9"
+                ],
+                "PLU_0611": [
+                  "10"
+                ],
+                "PLC_0611": [
+                  "10"
+                ],
+                "PERSON_LA": [
+                  "16"
+                ],
+                "LEASE_TYPE": [
+                  "3"
+                ],
+                "ASSET": [
+                  "999"
+                ],
+                "SECTOR": [
+                  "7",
+                  "9"
+                ],
+                "VEHICLE": [
+                  "900"
+                ],
+                "IND_R": [
+                  "20"
+                ],
+                "RELP": [
+                  "2"
+                ],
+                "ANCP": [
+                  "TOTP"
+                ],
+                "LANP": [
+                  "LOTE",
+                  "71",
+                  "52",
+                  "41",
+                  "65"
+                ],
+                "ENGLP": [
+                  "OTH",
+                  "SOL"
+                ],
+                "WORK": [
+                  "9"
+                ],
+                "TYPE_WORK": [
+                  "9"
+                ],
+                "BUILDING_TYPE": [
+                  "999",
+                  "100",
+                  "200",
+                  "300",
+                  "400",
+                  "700",
+                  "800"
+                ],
+                "TYPE_BLDG": [
+                  "999",
+                  "100",
+                  "200",
+                  "300",
+                  "400",
+                  "700",
+                  "800"
+                ],
+                "PLURALITY": [
+                  "SX_6"
+                ]
+              },
+              "blacklist": {
+                "MEASURE": [
+                  "CABEE_1"
+                ]
+              },
+              "whitelist": {
+                "MEASURE": [
+                  "CABEE_.*"
+                ],
+                "FMCF": [
+                  "TOT",
+                  "[1-3]",
+                  "9"
+                ],
+                "STRD": [
+                  "TOT",
+                  "OPD",
+                  "[1-3]",
+                  "9",
+                  "11",
+                  "Z",
+                  "UPD"
+                ],
+                "LFSP": [
+                  "TOT",
+                  "EMP",
+                  "[1-4]",
+                  "7",
+                  "Z",
+                  "UEMP"
+                ],
+                "MTWP": [
+                  "TOT",
+                  "[1-3]M",
+                  "00[1-9]",
+                  "010",
+                  "011",
+                  "232",
+                  "TA",
+                  "BA",
+                  "B2",
+                  "233",
+                  "234",
+                  "Z"
+                ],
+                "TYPP": [
+                  "TOT",
+                  "10",
+                  "2",
+                  "3",
+                  "40",
+                  "50",
+                  "60",
+                  "Z",
+                  "V"
+                ],
+                "FMCF_INCC": [
+                  ".*_.*"
+                ],
+                "IND": [
+                  "-"
+                ],
+                "ANCP_2016": [
+                  "TOT",
+                  "[0-9]{4}"
+                ],
+                "BPLP_2016": [
+                  "TOT",
+                  "[0-9]{4}"
+                ],
+                "RELP_2016": [
+                  "TOT",
+                  "[0-9]{4}"
+                ],
+                "LANP_2016": [
+                  "TOT",
+                  "[0-9]{4}"
+                ],
+                "FMCF_2016": [
+                  "TOT",
+                  "[0-9]{4}"
+                ],
+                "HHCD_2016": [
+                  "TOT",
+                  "[0-9]{3}"
+                ],
+                "": [
+                  "A[0-9]+",
+                  "T.*",
+                  "O.*"
+                ],
+                "BUILDING_TYPE": [
+                  "999",
+                  "100",
+                  "110",
+                  "700",
+                  "800",
+                  "850"
+                ],
+                "TYPE_BLDG": [
+                  "999",
+                  "100",
+                  "110",
+                  "700",
+                  "800",
+                  "850"
+                ]
+              },
+              "selectedInitially": {
+                "REGIONTYPE": [
+                  "SA4"
+                ],
+                "COB": [
+                  "1101"
+                ],
+                "DT": [
+                  "2"
+                ],
+                "RESPONSE_CAT": [
+                  "RESPCLR_Y"
+                ],
+                "STATE": [
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8"
+                ],
+                "ASGS_2011": [
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8"
+                ]
+              }
+            },
+            {
+              "id": "367d6ecc",
+              "name": "Land Cover",
+              "url": "http://services.ga.gov.au/gis/rest/services/Land_Cover_WM/MapServer",
+              "type": "esri-mapServer",
+              "opacity": 1.0
+            }
+          ]
+        },
+        {
+          "name": "Weather",
+          "type": "group",
+          "preserveOrder": true,
+          "items": [
+            {
+              "id": "fa31eee8",
+              "name": "Rainfall, month-to-date",
+              "layers": "rain_day",
+              "url": "http://www.bom.gov.au/jsp/awra/thredds/wms/AWRACMS/deciles/month/rain_day.nc",
+              "type": "wms",
+              "legendUrl": "data/legends/Precipitation.png",
+              "ignoreUnknownTileErrors": true,
+              "supportsColorScaleRange": false,
+              "disableUserChanges": true,
+              "parameters": {
+                "styles": "boxfill/redbluedeciles",
+                "colorscalerange": "0,1"
+              },
+              "opacity": 0.75,
+              "description": "Daily precipitation grids are produced by the Bureau from approximately 6,500 rain gauge stations and interpolated to a 0.05 degree (approximately 5 x 5 km) national grid (Jones et al. 2009). Precipitation is an input into the AWRA-L model. The estimates are subject to approximations associated with interpolating observation point data to a national grid detailed in Jones et al. (2009). The precipitation input to the AWRA-L model are the near real time daily grids available at www.bom.gov.au/climate/maps. The monthly and annual precipitation is simply an aggregation of the near real time daily grids input to the AWRA-L model. Monthly grids that include additional rain gauge stations and rainfall observations (that are not available in near real time) can be found at www.bom.gov.au/climate/maps",
+              "featureInfoTemplate": {
+                "template": "In {{time}}, {{value}} of Australia had less rainfall than the clicked location.",
+                "name": "{{time}}: {{value}}",
+                "formats": {
+                  "value": {
+                    "style": "percent",
+                    "maximumFractionDigits": 0
+                  },
+                  "time": {
+                    "type": "dateTime",
+                    "format": "mmmm, yyyy"
+                  }
+                }
+              }
+            },
+            {
+              "id": "81edea39",
+              "name": "Root zone soil moisture, month-to-date",
+              "layers": "sm_pct",
+              "url": "http://www.bom.gov.au/jsp/awra/thredds/wms/AWRACMS/deciles/month/sm_pct.nc",
+              "type": "wms",
+              "legendUrl": "data/legends/Root_zone_soil_moisture.png",
+              "ignoreUnknownTileErrors": true,
+              "supportsColorScaleRange": false,
+              "disableUserChanges": true,
+              "parameters": {
+                "styles": "boxfill/redbluedeciles",
+                "colorscalerange": "0,1"
+              },
+              "opacity": 0.75,
+              "description": "Root Zone Soil Moisture is the sum of water in the AWRA-L Upper and Lower soil layers and represents the percentage of available water content in the top 1 m of the soil profile. The maximum storage within the soil layer is calculated from the depth of the soil and the relative soil water storage capacity. The soil properties that control the storage of water are derived from the continental scale mapping within Australian Soil Resources Information System (Johnston et al., 2003). The relative available water capacity of the soil layer is derived from ASRIS information as the available water capacity of a layer divided by its thickness. Pedotransfer functions are used to relate soil hydraulic properties to soil textural class. Soil drainage and moisture dynamics are then based on water balance considerations for each soil layer. The shallow and deep rooted vegetation can both draw on this combined layer. <p> Actual soil moisture grids estimate the percentage of available water content rather than total soil water volume. Relative soil moisture grids, like the other grids, represent the long term deciles.</p>",
+              "featureInfoTemplate": {
+                "template": "In {{time}}, {{value}} of Australia had a lower root zone soil moisture than the clicked location.",
+                "name": "{{time}}: {{value}}",
+                "formats": {
+                  "value": {
+                    "style": "percent",
+                    "maximumFractionDigits": 0
+                  },
+                  "time": {
+                    "type": "dateTime",
+                    "format": "mmmm, yyyy"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
