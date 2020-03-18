@@ -5,13 +5,12 @@
       "groupBy": "organization",
       "filterQuery": [ 'q=access_level:open&fq=res_format:(GeoJSON OR "OGC WMS" OR "OGC WFS" OR WFS OR "API ArcGIS Server Feature Service" OR "API ArcGIS Server Map Service" OR "API ArcGIS Map Service" OR "Esri REST")' ],
       "includeCsv": true,
-      "includeGeoJson": true,
+      "includeGeoJson": false,
       "includeKml": true,
       "includeWms": true,
-      "includeWfs": true,
+      "includeWfs": false,
       "includeEsriMapServer": true,
       "includeEsriFeatureServer": true,
-      "esriMapServerResourceFormat": "(ArcGIS( Server)? Map Service)|(^esri rest$)",
-      "esriFeatureServerResourceFormat": "(ArcGIS( Server)? Feature Service)|(^esri rest$)"
+      "esriMapServerResourceFormat": "(ArcGIS( Server)? Map Service)|(^esri rest$)"
 
     }
