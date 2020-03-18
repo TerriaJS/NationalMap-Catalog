@@ -1,7 +1,16 @@
     {
       "type": "ckan",
       "name": "Western Australian Government",
-      "url": "http://catalogue.beta.data.wa.gov.au/",
+      "url": "https://catalogue.data.wa.gov.au/",
       "groupBy": "organization",
-      "filterQuery": [ "q=data_homepage:*_Public_Services*&fq=res_format:WMS" ]
+      "filterQuery": [ 'q=access_level:open&fq=res_format:(GeoJSON OR "OGC WMS" OR "OGC WFS" OR WFS OR "API ArcGIS Server Feature Service" OR "API ArcGIS Server Map Service" OR "API ArcGIS Map Service" OR "Esri REST")' ],
+      "includeCsv": true,
+      "includeGeoJson": false,
+      "includeKml": true,
+      "includeWms": true,
+      "includeWfs": false,
+      "includeEsriMapServer": true,
+      "includeEsriFeatureServer": false,
+      "esriMapServerResourceFormat": "(ArcGIS( Server)? Map Service)|(^esri rest$)"
+
     }
