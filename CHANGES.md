@@ -1,6 +1,8 @@
 
 Change Log
 ==========
+### 2020-03-19
+* Added WA CKAN catalogue, excluding GeoJSON and WFS datasets.
 
 ### 2019-12-05
 * Updated GSKY blended service
