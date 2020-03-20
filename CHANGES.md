@@ -1,6 +1,10 @@
 
 Change Log
 ==========
+### 2020-03-20
+* Removed asris.csiro.au from CORS list
+* Replace http with https for all asris.csiro.au urls.
+
 ### 2020-03-19
 * Added WA CKAN catalogue, excluding GeoJSON and WFS datasets.
 * Added forests data.
