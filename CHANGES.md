@@ -1,6 +1,9 @@
 
 Change Log
 ==========
+### 2020-05-26
+* Use full url for CDP region geojson so that it works correctly for other map repos.
+
 ### 2020-03-20
 * Removed asris.csiro.au from CORS list
 * Replace http with https for all asris.csiro.au urls.
