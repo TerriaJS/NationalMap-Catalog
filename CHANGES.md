@@ -1,6 +1,9 @@
 
 Change Log
 ==========
+### 2020-08-24
+* Added Department of Health COVID-19 data
+
 ### 2020-05-26
 * Use full url for CDP region geojson so that it works correctly for other map repos.
 
