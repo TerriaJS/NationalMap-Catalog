@@ -1,6 +1,10 @@
 
 Change Log
 ==========
+### 2020-08-26
+* Added data.gov.au to CORS list instead of going via proxy
+* Updated NEXIS population datasets
+
 ### 2020-08-24
 * Added Department of Health COVID-19 data
 
