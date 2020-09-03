@@ -1,6 +1,9 @@
 
 Change Log
 ==========
+### 2020-09-03
+* Fixed problem of NEXIS population datasets not showing the 100m layer
+
 ### 2020-08-26
 * Added data.gov.au to CORS list instead of going via proxy
 * Updated NEXIS population datasets
