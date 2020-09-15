@@ -1,6 +1,9 @@
 
 Change Log
 ==========
+### 2020-09-15 (uploaded as 2020-09-03 to avoid a re-release)
+* Added NSW Camden Camden Environmental Monitoring Project datasets from GA
+
 ### 2020-09-03
 * Fixed problem of NEXIS population datasets not showing the 100m layer
 
