@@ -39,6 +39,7 @@ https://data.dea.ga.gov.au/ITEM_V2/Itemv2.geojson
 https://data.dea.ga.gov.au/LHTC_Tides/high_composite_20.geojson
 https://data.dea.ga.gov.au/LHTC_Tides/low_composite_20.geojson
 https://hotspots.dea.ga.gov.au/geoserver/ows
+https://ows.dea.ga.gov.au/
 https://ows.services.dea.ga.gov.au
 https://ows.services.dea.ga.gov.au/
 https://services.ga.gov.au/gis/rest/services/NAIF_Act_2016_Northern_Australia_Definition/MapServer
