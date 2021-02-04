@@ -1,6 +1,10 @@
 
 Change Log
 ==========
+### 2020-02-04
+* Added Electricity Infrastructure, Electric Vehicles & Renewable Energy groups from AREMI
+
+
 ### 2020-09-15 (uploaded as 2020-09-03 to avoid a re-release)
 * Added NSW Camden Camden Environmental Monitoring Project datasets from GA
 
