@@ -5,7 +5,7 @@
 var fs = require('fs');
 var path = require('path');
 var gulp = require('gulp');
-var gutil = require('gulp-util');
+//var gutil = require('gulp-util');
 //var generateSchema = require('generate-terriajs-schema');
 //var validateSchema = require('terriajs-schema');
 
