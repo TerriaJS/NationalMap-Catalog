@@ -215,26 +215,6 @@
       ]
     },
     {
-      "id": "54071602",
-      "name": "Distance to Transmission Lines",
-      "url": "http://services.ga.gov.au/gis/services/Proximity_To_Transmission_Infrastructure_Lines_WM/MapServer/WMSServer",
-      "layers": "Distance_to_Transmission_Lines_Contours",
-      "type": "wms",
-      "opacity": 1,
-      "keepOnTop": true,
-      "featureInfoTemplate": {
-        "template": "{{distance}} km from the nearest transmission line.",
-        "name": "{{distance}} km"
-      },
-      "ignoreUnknownTileErrors": true,
-      "rectangle": [
-        112,
-        -48,
-        155,
-        -5
-      ]
-    },
-    {
       "id": "54071616",
       "name": "Substations",
       "layers": "National_Electricity_Transmission_Substations",
@@ -244,26 +224,6 @@
       "dataUrl": "http://services.ga.gov.au/gis/services/Electricity_Infrastructure/MapServer/WFSServer?service=WFS&request=GetFeature&typeName=topography_National_Electricity_Transmission_Substations:National_Electricity_Transmission_Substations&srsName=EPSG%3A4326&maxFeatures=10000",
       "dataUrlType": "wfs-complete",
       "keepOnTop": true,
-      "ignoreUnknownTileErrors": true,
-      "rectangle": [
-        112,
-        -48,
-        155,
-        -5
-      ]
-    },
-    {
-      "id": "54071620",
-      "name": "Distance to Transmission Substations",
-      "url": "http://services.ga.gov.au/gis/services/Proximity_To_Transmission_Infrastructure_Substations_WM/MapServer/WMSServer",
-      "layers": "Distance_to_Transmission_Substations_Contours",
-      "type": "wms",
-      "opacity": 1,
-      "keepOnTop": true,
-      "featureInfoTemplate": {
-        "template": "{{distance}} km from the nearest substation.",
-        "name": "{{distance}} km"
-      },
       "ignoreUnknownTileErrors": true,
       "rectangle": [
         112,
