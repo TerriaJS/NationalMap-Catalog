@@ -10,8 +10,6 @@ http://services.ga.gov.au/gis/rest/services/Defence_Restricted_Areas/MapServer/0
 http://services.ga.gov.au/gis/rest/services/Defence_Restricted_Areas/MapServer/1
 http://services.ga.gov.au/gis/rest/services/Defence_Restricted_Areas/MapServer/2
 http://services.ga.gov.au/gis/rest/services/Earthquake_Hazard_WM/MapServer
-http://services.ga.gov.au/gis/rest/services/Electricity_Infrastructure/MapServer/1
-http://services.ga.gov.au/gis/rest/services/Electricity_Infrastructure/MapServer/2
 http://services.ga.gov.au/gis/rest/services/GA_Surface_Geology/MapServer
 http://services.ga.gov.au/gis/rest/services/Geophysical_Grids/MapServer/4
 http://services.ga.gov.au/gis/rest/services/Geophysical_Grids/MapServer/9
@@ -51,4 +49,6 @@ https://ows.dea.ga.gov.au/
 https://ows.services.dea.ga.gov.au
 https://ows.services.dea.ga.gov.au/
 https://services.ga.gov.au/gis/rest/services/Foundation_Electricity_Infrastructure/MapServer
+https://services.ga.gov.au/gis/rest/services/Foundation_Electricity_Infrastructure/MapServer/1
+https://services.ga.gov.au/gis/rest/services/Foundation_Electricity_Infrastructure/MapServer/2
 https://services.ga.gov.au/gis/rest/services/NAIF_Act_2016_Northern_Australia_Definition/MapServer
