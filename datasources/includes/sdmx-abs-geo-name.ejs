@@ -1,9 +1,0 @@
-<% if (geoType==="SAx") { %>
-  "By Statistical Area"
-<% } else if (geoType.indexOf("LGA")===0) { %>
-  "By Local Government Area"
-<% } else if (geoType==="SA1_SA") { %>
-  "By SA1 (South Australia only)"
-<% } else { %>
-  "<%= geoType %>"
-<% } %>
